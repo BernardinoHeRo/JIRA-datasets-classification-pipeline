@@ -1,0 +1,86 @@
+# src/run_all.py
+
+# ============================
+# ORQUESTADOR DEL PIPELINE
+# ============================
+# Aquí solo se define el flujo alto nivel:
+#
+# Para cada dataset:
+#   1. Preprocesamiento
+#   2. Balanceo (CSBBoost, HCBOU)
+#   3. Escalado (StandardScaler, RobustScaler)
+#   (en el futuro)
+#   4. Selección de características
+#   5. Búsqueda de hiperparámetros
+#   6. Clasificación / métricas
+# ============================
+
+from src.config import DATASETS
+from src.preprocessing import preprocess_dataset
+from src.balancing import balance_with_csbboost, balance_with_hcbou, balance_with_smote
+from src.scaling import scale_balanced
+
+
+def main():
+    """
+    Ejecuta el pipeline completo (fases 1 a 3) para cada dataset
+    definido en src/config.py (lista DATASETS).
+    """
+
+    for ds in DATASETS:
+        
+        print("\n\n")
+        print("*" * 150)
+        print("*" * 150)
+        print("*" * 150)
+        print("*" * 150)
+        print("*" * 150)
+        print(f"\n================ DATASET: {ds} ================\n")
+
+        # ----------------------------
+        # 1) PREPROCESAMIENTO
+        # ----------------------------
+        preprocess_dataset(ds)
+
+        # ----------------------------
+        # 2) BALANCEO
+        # ----------------------------
+        balance_with_csbboost(ds)
+        balance_with_hcbou(ds)
+        balance_with_smote(ds)
+
+        # ----------------------------
+        # 3) ESCALADO
+        # ----------------------------
+        print(f"\n\n=====Escalado de datos con StandardScaler y RobustScaler=====")
+        print("=============================================================")
+        scale_balanced(ds, method="csbboost", scaler_type="standard")
+        scale_balanced(ds, method="csbboost", scaler_type="robust")
+        
+        scale_balanced(ds, method="hcbou", scaler_type="standard")
+        scale_balanced(ds, method="hcbou", scaler_type="robust")
+        
+        scale_balanced(ds, method="smote", scaler_type="standard")
+        scale_balanced(ds, method="smote", scaler_type="robust")
+    
+
+        # ----------------------------
+        # 4) FUTURO: SELECCIÓN DE CARACTERÍSTICAS
+        # ----------------------------
+        # print("[4] Selección de características")
+        # run_feature_selection(ds, method="csbboost")
+        # run_feature_selection(ds, method="hcbou")
+
+        # ----------------------------
+        # 5) FUTURO: BÚSQUEDA DE HIPERPARÁMETROS
+        # ----------------------------
+        # print("[5] Búsqueda de hiperparámetros")
+
+        # ----------------------------
+        # 6) FUTURO: CLASIFICACIÓN FINAL
+        # ----------------------------
+        # print("[6] Clasificación final y métricas")
+
+
+if __name__ == "__main__":
+    main()
