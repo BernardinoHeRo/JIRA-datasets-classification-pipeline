@@ -26,6 +26,9 @@ ARTIFACTS_DIR = BASE_DIR / "artifacts"
 # Carpeta opcional para guardar figuras (si luego las usas)
 PLOTS_DIR = BASE_DIR / "plots"
 
+# Carpeta para guardar archivos de log
+LOGS_DIR = BASE_DIR / "logs"
+
 # Nombre de la columna objetivo en tus datasets JIRA
 TARGET_COL = "RealBug"
 
