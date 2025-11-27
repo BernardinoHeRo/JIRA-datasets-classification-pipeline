@@ -19,6 +19,7 @@ from src.config import DATASETS
 from src.preprocessing import preprocess_dataset
 from src.balancing import balance_with_csbboost, balance_with_hcbou, balance_with_smote
 from src.scaling import scale_balanced
+from src.hyperparameter_tuning import tune_hyperparameters
 from src.logger import setup_logging, close_logging
 
 
@@ -76,14 +77,19 @@ def main():
             # run_feature_selection(ds, method="hcbou")
 
             # ----------------------------
-            # 5) FUTURO: BÚSQUEDA DE HIPERPARÁMETROS
+            # BÚSQUEDA DE HIPERPARÁMETROS
             # ----------------------------
-            # print("[5] Búsqueda de hiperparámetros")
+            print("\n\n================ Búsqueda de hiperparámetros ================")
+            print("=============================================================")
+
+            # Ejecutar búsqueda de hiperparámetros para todas las combinaciones
+            # de métodos de balanceo y tipos de escalado para este dataset
+            tune_hyperparameters(ds)
 
             # ----------------------------
-            # 6) FUTURO: CLASIFICACIÓN FINAL
+            # 5) FUTURO: CLASIFICACIÓN FINAL
             # ----------------------------
-            # print("[6] Clasificación final y métricas")
+            # print("[5] Clasificación final y métricas")
 
     finally:
         # Cerrar logging y restaurar stdout

@@ -29,6 +29,12 @@ PLOTS_DIR = BASE_DIR / "plots"
 # Carpeta para guardar archivos de log
 LOGS_DIR = BASE_DIR / "logs"
 
+# Carpetas para las fases del pipeline organizadas por número
+PHASE_01_PREPROCESSING_DIR = ARTIFACTS_DIR / "01_preprocessing"
+PHASE_02_BALANCING_DIR = ARTIFACTS_DIR / "02_balancing"
+PHASE_03_SCALING_DIR = ARTIFACTS_DIR / "03_scaling"
+PHASE_04_HYPERPARAMETER_DIR = ARTIFACTS_DIR / "04_hyperparameter_tuning"
+
 # Nombre de la columna objetivo en tus datasets JIRA
 TARGET_COL = "RealBug"
 
@@ -45,3 +51,12 @@ DATASETS = [
     "jruby-1.1",
     "wicket-1.3.0-beta2",
 ]
+
+# Métodos de balanceo disponibles
+BALANCING_METHODS = ["csbboost", "hcbou", "smote"]
+
+# Tipos de escalado disponibles
+SCALING_TYPES = ["standard", "robust"]
+
+# Modelos de clasificación para hyperparameter tuning
+CLASSIFICATION_MODELS = ["svm", "naive_bayes", "decision_tree"]
