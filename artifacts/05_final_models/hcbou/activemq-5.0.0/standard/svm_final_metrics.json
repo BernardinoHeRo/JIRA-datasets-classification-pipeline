@@ -55,11 +55,11 @@
       42
     ]
   ],
-  "training_time_seconds": 0.195072,
+  "training_time_seconds": 0.195529,
   "best_hyperparameters": {
     "C": 100,
     "gamma": 0.1,
     "kernel": "rbf"
   },
-  "timestamp": "2025-11-27T19:30:22.007209"
+  "timestamp": "2025-11-27T19:55:55.959213"
 }

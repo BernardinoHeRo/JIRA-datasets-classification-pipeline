@@ -1,14 +1,19 @@
 === INICIO DE EJECUCIÓN DEL PIPELINE ===
-Timestamp: 2025-11-27 19:29:37
+Timestamp: 2025-11-27 19:55:09
 ==================================================
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: activemq-5.0.0 ================
 
@@ -115,44 +120,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: activemq-5.0.0
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: activemq-5.0.0
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ activemq-5.0.0 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/activemq-5.0.0/standard
+       ✓ Datos cargados: X_train=(1507, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/activemq-5.0.0/standard
 
-→ activemq-5.0.0 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ activemq-5.0.0 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/activemq-5.0.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | csbboost | standard
+======================================================================
 
-→ activemq-5.0.0 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ activemq-5.0.0 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/activemq-5.0.0/robust
+       ✓ Datos cargados: X_train=(1507, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/activemq-5.0.0/robust
 
-→ activemq-5.0.0 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/activemq-5.0.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/activemq-5.0.0/standard
+       ✓ Datos cargados: X_train=(1506, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/activemq-5.0.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/activemq-5.0.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/activemq-5.0.0/robust
+       ✓ Datos cargados: X_train=(1506, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/activemq-5.0.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/activemq-5.0.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/activemq-5.0.0/standard
+       ✓ Datos cargados: X_train=(1506, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/activemq-5.0.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/activemq-5.0.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: activemq-5.0.0 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/activemq-5.0.0/robust
+       ✓ Datos cargados: X_train=(1506, 65), X_test=(377, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/activemq-5.0.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/activemq-5.0.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: activemq-5.0.0 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: activemq-5.0.0
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -1249,11 +1427,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: derby-10.5.1.1 ================
 
@@ -1360,44 +1543,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: derby-10.5.1.1
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: derby-10.5.1.1
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ derby-10.5.1.1 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/derby-10.5.1.1/standard
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/derby-10.5.1.1/standard
 
-→ derby-10.5.1.1 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ derby-10.5.1.1 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/derby-10.5.1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | csbboost | standard
+======================================================================
 
-→ derby-10.5.1.1 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ derby-10.5.1.1 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/derby-10.5.1.1/robust
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/derby-10.5.1.1/robust
 
-→ derby-10.5.1.1 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/derby-10.5.1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/derby-10.5.1.1/standard
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/derby-10.5.1.1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/derby-10.5.1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/derby-10.5.1.1/robust
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/derby-10.5.1.1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/derby-10.5.1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/derby-10.5.1.1/standard
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/derby-10.5.1.1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/derby-10.5.1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: derby-10.5.1.1 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/derby-10.5.1.1/robust
+       ✓ Datos cargados: X_train=(2164, 65), X_test=(541, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/derby-10.5.1.1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/derby-10.5.1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: derby-10.5.1.1 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: derby-10.5.1.1
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -1764,7 +2120,7 @@ Configuración: csbboost_robust
       ============================================================
 
     ✓ decision_tree: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.03s
+       Tiempo de entrenamiento: 0.04s
 
 
 ------------------------------------------------------------
@@ -1828,7 +2184,7 @@ Configuración: hcbou_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.43s
+       Tiempo de entrenamiento: 0.44s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-08}
@@ -2188,7 +2544,7 @@ Configuración: smote_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.42s
+       Tiempo de entrenamiento: 0.41s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-09}
@@ -2494,11 +2850,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: groovy-1_6_BETA_1 ================
 
@@ -2605,44 +2966,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: groovy-1_6_BETA_1
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: groovy-1_6_BETA_1
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ groovy-1_6_BETA_1 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/groovy-1_6_BETA_1/standard
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/groovy-1_6_BETA_1/standard
 
-→ groovy-1_6_BETA_1 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ groovy-1_6_BETA_1 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/groovy-1_6_BETA_1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | csbboost | standard
+======================================================================
 
-→ groovy-1_6_BETA_1 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ groovy-1_6_BETA_1 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/groovy-1_6_BETA_1/robust
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/groovy-1_6_BETA_1/robust
 
-→ groovy-1_6_BETA_1 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/groovy-1_6_BETA_1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/groovy-1_6_BETA_1/standard
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/groovy-1_6_BETA_1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/groovy-1_6_BETA_1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/groovy-1_6_BETA_1/robust
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/groovy-1_6_BETA_1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/groovy-1_6_BETA_1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/groovy-1_6_BETA_1/standard
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/groovy-1_6_BETA_1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/groovy-1_6_BETA_1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: groovy-1_6_BETA_1 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/groovy-1_6_BETA_1/robust
+       ✓ Datos cargados: X_train=(656, 65), X_test=(165, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/groovy-1_6_BETA_1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/groovy-1_6_BETA_1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: groovy-1_6_BETA_1 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: groovy-1_6_BETA_1
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -3739,11 +4273,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: hbase-0.94.0 ================
 
@@ -3850,44 +4389,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: hbase-0.94.0
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: hbase-0.94.0
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ hbase-0.94.0 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/hbase-0.94.0/standard
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hbase-0.94.0/standard
 
-→ hbase-0.94.0 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ hbase-0.94.0 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hbase-0.94.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | csbboost | standard
+======================================================================
 
-→ hbase-0.94.0 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ hbase-0.94.0 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/hbase-0.94.0/robust
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hbase-0.94.0/robust
 
-→ hbase-0.94.0 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hbase-0.94.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/hbase-0.94.0/standard
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hbase-0.94.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hbase-0.94.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/hbase-0.94.0/robust
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hbase-0.94.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hbase-0.94.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/hbase-0.94.0/standard
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hbase-0.94.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hbase-0.94.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hbase-0.94.0 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/hbase-0.94.0/robust
+       ✓ Datos cargados: X_train=(846, 65), X_test=(212, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hbase-0.94.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hbase-0.94.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hbase-0.94.0 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: hbase-0.94.0
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -3958,7 +4670,7 @@ Configuración: csbboost_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.06s
+       Tiempo de entrenamiento: 0.07s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 0.0001}
@@ -4984,11 +5696,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: hive-0.9.0 ================
 
@@ -5095,44 +5812,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: hive-0.9.0
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: hive-0.9.0
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ hive-0.9.0 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/hive-0.9.0/standard
+       ✓ Datos cargados: X_train=(1131, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hive-0.9.0/standard
 
-→ hive-0.9.0 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ hive-0.9.0 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hive-0.9.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | csbboost | standard
+======================================================================
 
-→ hive-0.9.0 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ hive-0.9.0 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/hive-0.9.0/robust
+       ✓ Datos cargados: X_train=(1131, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hive-0.9.0/robust
 
-→ hive-0.9.0 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/hive-0.9.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/hive-0.9.0/standard
+       ✓ Datos cargados: X_train=(1132, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hive-0.9.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hive-0.9.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/hive-0.9.0/robust
+       ✓ Datos cargados: X_train=(1132, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hive-0.9.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/hive-0.9.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/hive-0.9.0/standard
+       ✓ Datos cargados: X_train=(1132, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hive-0.9.0/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hive-0.9.0/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: hive-0.9.0 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/hive-0.9.0/robust
+       ✓ Datos cargados: X_train=(1132, 65), X_test=(284, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hive-0.9.0/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/hive-0.9.0/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: hive-0.9.0 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: hive-0.9.0
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -5563,7 +6453,7 @@ Configuración: hcbou_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.11s
+       Tiempo de entrenamiento: 0.12s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-05}
@@ -6229,11 +7119,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: jruby-1.1 ================
 
@@ -6340,44 +7235,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: jruby-1.1
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: jruby-1.1
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ jruby-1.1 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/jruby-1.1/standard
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/jruby-1.1/standard
 
-→ jruby-1.1 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ jruby-1.1 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/jruby-1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | csbboost | standard
+======================================================================
 
-→ jruby-1.1 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ jruby-1.1 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/jruby-1.1/robust
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/jruby-1.1/robust
 
-→ jruby-1.1 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/jruby-1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/jruby-1.1/standard
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/jruby-1.1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/jruby-1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/jruby-1.1/robust
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/jruby-1.1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/jruby-1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/jruby-1.1/standard
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/jruby-1.1/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/jruby-1.1/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: jruby-1.1 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/jruby-1.1/robust
+       ✓ Datos cargados: X_train=(584, 65), X_test=(147, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/jruby-1.1/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/jruby-1.1/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: jruby-1.1 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: jruby-1.1
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -7474,11 +8542,16 @@ Configuración: smote_robust
 
 
 
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
-******************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
+********************************************************************************************************************************************************************************************************
 
 ================ DATASET: wicket-1.3.0-beta2 ================
 
@@ -7588,44 +8661,217 @@ FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)
 ================================================================================
 
 ================================================================================
-BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH: wicket-1.3.0-beta2
+🎯 BÚSQUEDA DE HIPERPARÁMETROS CON GRIDSEARCH
+📊 Dataset: wicket-1.3.0-beta2
 ================================================================================
 
-------------------------------------------------------------
-Procesando: csbboost_standard
-------------------------------------------------------------
+📋 Total de configuraciones a procesar: 6
+   • Métodos de balanceo: ['csbboost', 'hcbou', 'smote']
+   • Tipos de escalado: ['standard', 'robust']
+   • Modelos por config: 3
 
-→ wicket-1.3.0-beta2 | csbboost | standard
+********************************************************************************
+[1/6] PROCESANDO CONFIGURACIÓN: csbboost_standard
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: csbboost_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | csbboost | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/wicket-1.3.0-beta2/standard
+       ✓ Datos cargados: X_train=(1410, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/wicket-1.3.0-beta2/standard
 
-→ wicket-1.3.0-beta2 | csbboost | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
 
-------------------------------------------------------------
-Procesando: hcbou_standard
-------------------------------------------------------------
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
 
-→ wicket-1.3.0-beta2 | hcbou | standard
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/wicket-1.3.0-beta2/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
 
-------------------------------------------------------------
-Procesando: hcbou_robust
-------------------------------------------------------------
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | csbboost | standard
+======================================================================
 
-→ wicket-1.3.0-beta2 | hcbou | robust
 
-------------------------------------------------------------
-Procesando: smote_standard
-------------------------------------------------------------
+✅ Configuración 1/6 completada: csbboost_standard
 
-→ wicket-1.3.0-beta2 | smote | standard
+********************************************************************************
+[2/6] PROCESANDO CONFIGURACIÓN: csbboost_robust
+********************************************************************************
 
-------------------------------------------------------------
-Procesando: smote_robust
-------------------------------------------------------------
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | csbboost | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/csbboost/wicket-1.3.0-beta2/robust
+       ✓ Datos cargados: X_train=(1410, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/wicket-1.3.0-beta2/robust
 
-→ wicket-1.3.0-beta2 | smote | robust
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/csbboost/wicket-1.3.0-beta2/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | csbboost | robust
+======================================================================
+
+
+✅ Configuración 2/6 completada: csbboost_robust
+
+********************************************************************************
+[3/6] PROCESANDO CONFIGURACIÓN: hcbou_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | hcbou | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/wicket-1.3.0-beta2/standard
+       ✓ Datos cargados: X_train=(1409, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/wicket-1.3.0-beta2/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/wicket-1.3.0-beta2/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | hcbou | standard
+======================================================================
+
+
+✅ Configuración 3/6 completada: hcbou_standard
+
+********************************************************************************
+[4/6] PROCESANDO CONFIGURACIÓN: hcbou_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | hcbou | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/hcbou/wicket-1.3.0-beta2/robust
+       ✓ Datos cargados: X_train=(1409, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/wicket-1.3.0-beta2/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/hcbou/wicket-1.3.0-beta2/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | hcbou | robust
+======================================================================
+
+
+✅ Configuración 4/6 completada: hcbou_robust
+
+********************************************************************************
+[5/6] PROCESANDO CONFIGURACIÓN: smote_standard
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | smote | standard
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/wicket-1.3.0-beta2/standard
+       ✓ Datos cargados: X_train=(1410, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/wicket-1.3.0-beta2/standard
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/wicket-1.3.0-beta2/standard
+          ✓ naive_bayes_gaussian: guardado
+          ✓ decision_tree: guardado
+          ✓ svm: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | smote | standard
+======================================================================
+
+
+✅ Configuración 5/6 completada: smote_standard
+
+********************************************************************************
+[6/6] PROCESANDO CONFIGURACIÓN: smote_robust
+********************************************************************************
+
+======================================================================
+🔧 CONFIGURACIÓN: wicket-1.3.0-beta2 | smote | robust
+======================================================================
+       📂 Cargando datos desde: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/03_scaling/smote/wicket-1.3.0-beta2/robust
+       ✓ Datos cargados: X_train=(1410, 65), X_test=(353, 65)
+       📁 Directorio de salida: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/wicket-1.3.0-beta2/robust
+
+       📋 Modelos a procesar: ['svm', 'naive_bayes_gaussian', 'decision_tree']
+       ⚡ Modo PARALELO
+       💾 Caché ACTIVADO
+
+       🚀 Iniciando procesamiento paralelo de 3 modelos...
+       ✓ Progreso: 1/3 modelos completados
+       ✓ Progreso: 2/3 modelos completados
+       ✓ Progreso: 3/3 modelos completados
+
+       💾 Guardando resultados en: /Users/behero/Documents/SCHOOL/UTM/MIS/2025/TERCER-SEMESTRE/prediccion-de-errores-en-la-ingenieria-de-software/JIRA-datasets-classification-pipeline/artifacts/04_hyperparameter_tuning/smote/wicket-1.3.0-beta2/robust
+          ✓ naive_bayes_gaussian: guardado
+          ✓ svm: guardado
+          ✓ decision_tree: guardado
+       ✓ Resumen guardado: 3/3 modelos
+
+======================================================================
+✅ CONFIGURACIÓN COMPLETADA: wicket-1.3.0-beta2 | smote | robust
+======================================================================
+
+
+✅ Configuración 6/6 completada: smote_robust
+
+================================================================================
+🎉 TODAS LAS CONFIGURACIONES COMPLETADAS PARA: wicket-1.3.0-beta2
+================================================================================
+
 
 ================================================================================
 FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS
@@ -7696,7 +8942,7 @@ Configuración: csbboost_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.16s
+       Tiempo de entrenamiento: 0.15s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-05}
@@ -7812,7 +9058,7 @@ Configuración: csbboost_standard
       ============================================================
 
     ✓ decision_tree: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.03s
+       Tiempo de entrenamiento: 0.02s
 
 
 ------------------------------------------------------------
@@ -8056,7 +9302,7 @@ Configuración: hcbou_standard
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.18s
+       Tiempo de entrenamiento: 0.17s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-07}
@@ -8236,7 +9482,7 @@ Configuración: hcbou_robust
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.14s
+       Tiempo de entrenamiento: 0.13s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-05}
@@ -8596,7 +9842,7 @@ Configuración: smote_robust
       ============================================================
 
     ✓ svm: Entrenamiento y evaluación completados
-       Tiempo de entrenamiento: 0.11s
+       Tiempo de entrenamiento: 0.10s
 
     → naive_bayes_gaussian: cargando datos y hiperparámetros...
       Hiperparámetros: {'var_smoothing': 1e-06}
@@ -8721,5 +9967,5 @@ Configuración: smote_robust
 
 ==================================================
 === FIN DE EJECUCIÓN DEL PIPELINE ===
-Timestamp: 2025-11-27 19:35:12
+Timestamp: 2025-11-27 20:00:53
 ==================================================

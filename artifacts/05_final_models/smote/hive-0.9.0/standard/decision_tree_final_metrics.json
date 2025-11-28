@@ -55,12 +55,12 @@
       42
     ]
   ],
-  "training_time_seconds": 0.009591,
+  "training_time_seconds": 0.009614,
   "best_hyperparameters": {
     "criterion": "entropy",
     "max_depth": 10,
     "min_samples_leaf": 8,
     "min_samples_split": 20
   },
-  "timestamp": "2025-11-27T19:33:36.991197"
+  "timestamp": "2025-11-27T19:59:17.698824"
 }
