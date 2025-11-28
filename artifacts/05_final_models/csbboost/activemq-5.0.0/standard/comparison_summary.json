@@ -1,0 +1,74 @@
+{
+  "dataset": "activemq-5.0.0",
+  "balancing_method": "csbboost",
+  "scaler_type": "standard",
+  "models": {
+    "svm": {
+      "F1_Score": 0.484375,
+      "Exactitud": 0.8249336870026526,
+      "Precision": 0.4492753623188406,
+      "Recall": 0.5254237288135594,
+      "Sensibilidad": 0.5254237288135594,
+      "Especificidad": 0.8805031446540881,
+      "Error": 0.17506631299734748,
+      "TP_Rate": 0.5254237288135594,
+      "FP_Rate": 0.11949685534591195,
+      "ROC_AUC": 0.8293358916959814,
+      "confusion_matrix": [
+        [
+          280,
+          38
+        ],
+        [
+          28,
+          31
+        ]
+      ]
+    },
+    "naive_bayes_gaussian": {
+      "F1_Score": 0.5426356589147286,
+      "Exactitud": 0.843501326259947,
+      "Precision": 0.5,
+      "Recall": 0.5932203389830508,
+      "Sensibilidad": 0.5932203389830508,
+      "Especificidad": 0.889937106918239,
+      "Error": 0.15649867374005305,
+      "TP_Rate": 0.5932203389830508,
+      "FP_Rate": 0.11006289308176101,
+      "ROC_AUC": 0.8404754290587357,
+      "confusion_matrix": [
+        [
+          283,
+          35
+        ],
+        [
+          24,
+          35
+        ]
+      ]
+    },
+    "decision_tree": {
+      "F1_Score": 0.6277372262773723,
+      "Exactitud": 0.8647214854111406,
+      "Precision": 0.5512820512820513,
+      "Recall": 0.7288135593220338,
+      "Sensibilidad": 0.7288135593220338,
+      "Especificidad": 0.889937106918239,
+      "Error": 0.13527851458885942,
+      "TP_Rate": 0.7288135593220338,
+      "FP_Rate": 0.11006289308176101,
+      "ROC_AUC": 0.8952137298795437,
+      "confusion_matrix": [
+        [
+          283,
+          35
+        ],
+        [
+          16,
+          43
+        ]
+      ]
+    }
+  },
+  "timestamp": "2025-11-27T19:30:20.788099"
+}

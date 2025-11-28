@@ -1,0 +1,13 @@
+{
+  "best_params": {
+    "var_smoothing": 1e-07
+  },
+  "best_cv_score": 0.5799867186739328,
+  "test_metrics": {
+    "accuracy": 0.8753541076487252,
+    "precision": 0.2631578947368421,
+    "recall": 0.38461538461538464,
+    "f1_score": 0.3125
+  },
+  "timestamp": "2025-11-27T19:34:34.633226"
+}

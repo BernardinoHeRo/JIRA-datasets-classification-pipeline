@@ -1,0 +1,16 @@
+{
+  "best_params": {
+    "criterion": "gini",
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "min_samples_split": 5
+  },
+  "best_cv_score": 0.7976066427301208,
+  "test_metrics": {
+    "accuracy": 0.7393715341959335,
+    "precision": 0.2777777777777778,
+    "recall": 0.5194805194805194,
+    "f1_score": 0.36199095022624433
+  },
+  "timestamp": "2025-11-27T19:30:57.865460"
+}

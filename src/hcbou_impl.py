@@ -467,11 +467,11 @@ def hcbou_balance(X, y, max_clusters_maj=8, max_clusters_min=6, k_smote=3,
     final_counts = y_balanced.value_counts().sort_index()
 
     if verbose:
-        print(f"HCBOU balanceo terminado.")
+        print(f"\nHCBOU balanceo terminado.")
         print(f"    Tamaño final del train balanceado: {len(y_balanced)}")
         #for class_label, count in final_counts.items():
         #    print(f"    Clase {class_label}: {count} muestras")
-        print(f"    Distribución clases: {dict(final_counts)}")
+        print(f"    Distribución clases: { {int(k): int(v) for k, v in final_counts.items()} }")
         # print(f"Ratio de balance: {final_counts.min()}:{final_counts.max()}")
         # print(f"Cambio de tamaño del conjunto de datos: {len(X)} -> {len(X_balanced)} ({(len(X_balanced)-len(X))/len(X)*100:+.1f}%)")
 

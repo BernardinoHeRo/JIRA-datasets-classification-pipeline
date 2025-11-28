@@ -1,0 +1,16 @@
+{
+  "best_params": {
+    "criterion": "entropy",
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2
+  },
+  "best_cv_score": 0.7919052625334987,
+  "test_metrics": {
+    "accuracy": 0.7504621072088724,
+    "precision": 0.30405405405405406,
+    "recall": 0.5844155844155844,
+    "f1_score": 0.4
+  },
+  "timestamp": "2025-11-27T19:30:49.873167"
+}

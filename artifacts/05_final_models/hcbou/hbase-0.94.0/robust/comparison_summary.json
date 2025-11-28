@@ -1,0 +1,74 @@
+{
+  "dataset": "hbase-0.94.0",
+  "balancing_method": "hcbou",
+  "scaler_type": "robust",
+  "models": {
+    "svm": {
+      "F1_Score": 0.5535714285714286,
+      "Exactitud": 0.7641509433962265,
+      "Precision": 0.45588235294117646,
+      "Recall": 0.7045454545454546,
+      "Sensibilidad": 0.7045454545454546,
+      "Especificidad": 0.7797619047619048,
+      "Error": 0.2358490566037736,
+      "TP_Rate": 0.7045454545454546,
+      "FP_Rate": 0.22023809523809523,
+      "ROC_AUC": 0.8005952380952381,
+      "confusion_matrix": [
+        [
+          131,
+          37
+        ],
+        [
+          13,
+          31
+        ]
+      ]
+    },
+    "naive_bayes_gaussian": {
+      "F1_Score": 0.34509803921568627,
+      "Exactitud": 0.21226415094339623,
+      "Precision": 0.20853080568720378,
+      "Recall": 1.0,
+      "Sensibilidad": 1.0,
+      "Especificidad": 0.005952380952380952,
+      "Error": 0.7877358490566038,
+      "TP_Rate": 1.0,
+      "FP_Rate": 0.9940476190476191,
+      "ROC_AUC": 0.723349567099567,
+      "confusion_matrix": [
+        [
+          1,
+          167
+        ],
+        [
+          0,
+          44
+        ]
+      ]
+    },
+    "decision_tree": {
+      "F1_Score": 0.5416666666666666,
+      "Exactitud": 0.7924528301886793,
+      "Precision": 0.5,
+      "Recall": 0.5909090909090909,
+      "Sensibilidad": 0.5909090909090909,
+      "Especificidad": 0.8452380952380952,
+      "Error": 0.20754716981132076,
+      "TP_Rate": 0.5909090909090909,
+      "FP_Rate": 0.15476190476190477,
+      "ROC_AUC": 0.7180735930735931,
+      "confusion_matrix": [
+        [
+          142,
+          26
+        ],
+        [
+          18,
+          26
+        ]
+      ]
+    }
+  },
+  "timestamp": "2025-11-27T19:32:49.914809"
+}

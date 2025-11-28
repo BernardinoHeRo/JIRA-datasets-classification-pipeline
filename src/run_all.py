@@ -1,18 +1,16 @@
 # src/run_all.py
 
 # ============================
-# ORQUESTADOR DEL PIPELINE
+# ORQUESTADOR DEL PIPELINE COMPLETO
 # ============================
-# Aquí solo se define el flujo alto nivel:
+# Pipeline de 5 fases:
 #
 # Para cada dataset:
 #   1. Preprocesamiento
-#   2. Balanceo (CSBBoost, HCBOU)
+#   2. Balanceo (CSBBoost, HCBOU, SMOTE)
 #   3. Escalado (StandardScaler, RobustScaler)
-#   (en el futuro)
-#   4. Selección de características
-#   5. Búsqueda de hiperparámetros
-#   6. Clasificación / métricas
+#   4. Búsqueda de hiperparámetros (GridSearchCV)
+#   5. Entrenamiento final y evaluación
 # ============================
 
 from src.config import DATASETS
@@ -20,12 +18,13 @@ from src.preprocessing import preprocess_dataset
 from src.balancing import balance_with_csbboost, balance_with_hcbou, balance_with_smote
 from src.scaling import scale_balanced
 from src.hyperparameter_tuning import tune_hyperparameters
+from src.final_training import train_final_models
 from src.logger import setup_logging, close_logging
 
 
 def main():
     """
-    Ejecuta el pipeline completo (fases 1 a 3) para cada dataset
+    Ejecuta el pipeline completo (fases 1 a 5) para cada dataset
     definido en src/config.py (lista DATASETS).
     """
 
@@ -44,22 +43,30 @@ def main():
             print(f"\n================ DATASET: {ds} ================\n")
 
             # ----------------------------
-            # 1) PREPROCESAMIENTO
+            # FASE 1: PREPROCESAMIENTO
             # ----------------------------
+            print(f"\n{'='*80}")
+            print(f"FASE 1: PREPROCESAMIENTO")
+            print(f"{'='*80}")
             preprocess_dataset(ds)
 
             # ----------------------------
-            # 2) BALANCEO
+            # FASE 2: BALANCEO
             # ----------------------------
+            print(f"\n{'='*80}")
+            print(f"FASE 2: BALANCEO DE CLASES")
+            print(f"{'='*80}")
             balance_with_csbboost(ds)
             balance_with_hcbou(ds)
             balance_with_smote(ds)
 
             # ----------------------------
-            # 3) ESCALADO
+            # FASE 3: ESCALADO
             # ----------------------------
-            print(f"\n\n=====Escalado de datos con StandardScaler y RobustScaler=====")
-            print("=============================================================")
+            print(f"\n{'='*80}")
+            print(f"FASE 3: ESCALADO DE CARACTERÍSTICAS")
+            print(f"{'='*80}")
+            
             scale_balanced(ds, method="csbboost", scaler_type="standard")
             scale_balanced(ds, method="csbboost", scaler_type="robust")
 
@@ -70,26 +77,29 @@ def main():
             scale_balanced(ds, method="smote", scaler_type="robust")
 
             # ----------------------------
-            # 4) FUTURO: SELECCIÓN DE CARACTERÍSTICAS
+            # FASE 4: BÚSQUEDA DE HIPERPARÁMETROS
             # ----------------------------
-            # print("[4] Selección de características")
-            # run_feature_selection(ds, method="csbboost")
-            # run_feature_selection(ds, method="hcbou")
-
-            # ----------------------------
-            # BÚSQUEDA DE HIPERPARÁMETROS
-            # ----------------------------
-            print("\n\n================ Búsqueda de hiperparámetros ================")
-            print("=============================================================")
+            print(f"\n{'='*80}")
+            print(f"FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)")
+            print(f"{'='*80}")
 
             # Ejecutar búsqueda de hiperparámetros para todas las combinaciones
-            # de métodos de balanceo y tipos de escalado para este dataset
+            # (métodos de balanceo × tipos de escalado) para este dataset
             tune_hyperparameters(ds)
 
             # ----------------------------
-            # 5) FUTURO: CLASIFICACIÓN FINAL
+            # FASE 5: ENTRENAMIENTO FINAL Y EVALUACIÓN
             # ----------------------------
-            # print("[5] Clasificación final y métricas")
+            print(f"\n{'='*80}")
+            print(f"FASE 5: ENTRENAMIENTO FINAL CON MEJORES HIPERPARÁMETROS")
+            print(f"{'='*80}")
+
+            # Entrenar modelos finales con los mejores hiperparámetros encontrados
+            train_final_models(ds)
+
+            print(f"\n{'='*80}")
+            print(f"✓ PIPELINE COMPLETO PARA {ds}")
+            print(f"{'='*80}\n")
 
     finally:
         # Cerrar logging y restaurar stdout

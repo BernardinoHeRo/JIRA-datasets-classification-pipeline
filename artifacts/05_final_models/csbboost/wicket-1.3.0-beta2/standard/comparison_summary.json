@@ -1,0 +1,74 @@
+{
+  "dataset": "wicket-1.3.0-beta2",
+  "balancing_method": "csbboost",
+  "scaler_type": "standard",
+  "models": {
+    "svm": {
+      "F1_Score": 0.43137254901960786,
+      "Exactitud": 0.9178470254957507,
+      "Precision": 0.44,
+      "Recall": 0.4230769230769231,
+      "Sensibilidad": 0.4230769230769231,
+      "Especificidad": 0.9571865443425076,
+      "Error": 0.0821529745042493,
+      "TP_Rate": 0.4230769230769231,
+      "FP_Rate": 0.04281345565749235,
+      "ROC_AUC": 0.7638202775817455,
+      "confusion_matrix": [
+        [
+          313,
+          14
+        ],
+        [
+          15,
+          11
+        ]
+      ]
+    },
+    "naive_bayes_gaussian": {
+      "F1_Score": 0.3125,
+      "Exactitud": 0.8753541076487252,
+      "Precision": 0.2631578947368421,
+      "Recall": 0.38461538461538464,
+      "Sensibilidad": 0.38461538461538464,
+      "Especificidad": 0.9143730886850153,
+      "Error": 0.12464589235127478,
+      "TP_Rate": 0.38461538461538464,
+      "FP_Rate": 0.0856269113149847,
+      "ROC_AUC": 0.7749353093389791,
+      "confusion_matrix": [
+        [
+          299,
+          28
+        ],
+        [
+          16,
+          10
+        ]
+      ]
+    },
+    "decision_tree": {
+      "F1_Score": 0.2,
+      "Exactitud": 0.8640226628895185,
+      "Precision": 0.17647058823529413,
+      "Recall": 0.23076923076923078,
+      "Sensibilidad": 0.23076923076923078,
+      "Especificidad": 0.9143730886850153,
+      "Error": 0.1359773371104816,
+      "TP_Rate": 0.23076923076923078,
+      "FP_Rate": 0.0856269113149847,
+      "ROC_AUC": 0.6502587626440838,
+      "confusion_matrix": [
+        [
+          299,
+          28
+        ],
+        [
+          20,
+          6
+        ]
+      ]
+    }
+  },
+  "timestamp": "2025-11-27T19:35:07.497255"
+}

@@ -1,0 +1,15 @@
+{
+  "best_params": {
+    "C": 1000,
+    "gamma": 0.01,
+    "kernel": "rbf"
+  },
+  "best_cv_score": 0.8580733162830351,
+  "test_metrics": {
+    "accuracy": 0.7852112676056338,
+    "precision": 0.46875,
+    "recall": 0.5263157894736842,
+    "f1_score": 0.49586776859504134
+  },
+  "timestamp": "2025-11-27T19:32:58.122090"
+}
