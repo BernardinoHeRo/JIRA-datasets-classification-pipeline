@@ -1,65 +1,65 @@
 {
-  "TP": 31,
-  "TN": 283,
-  "FP": 35,
-  "FN": 28,
+  "TP": 56,
+  "TN": 0,
+  "FP": 318,
+  "FN": 3,
   "P": 59,
   "N": 318,
   "Total": 377,
-  "Error": 0.16710875331564987,
-  "Exactitud": 0.8328912466843501,
-  "TP_Rate": 0.5254237288135594,
-  "FP_Rate": 0.11006289308176101,
-  "Precision": 0.4696969696969697,
-  "Recall": 0.5254237288135594,
-  "Sensibilidad": 0.5254237288135594,
-  "Especificidad": 0.889937106918239,
-  "F1_Score": 0.496,
-  "Accuracy_sklearn": 0.8328912466843501,
-  "ROC_AUC": 0.8632874960025583,
-  "PR_AUC": 0.5629374418605643,
+  "Error": 0.8514588859416445,
+  "Exactitud": 0.14854111405835543,
+  "TP_Rate": 0.9491525423728814,
+  "FP_Rate": 1.0,
+  "Precision": 0.1497326203208556,
+  "Recall": 0.9491525423728814,
+  "Sensibilidad": 0.9491525423728814,
+  "Especificidad": 0.0,
+  "F1_Score": 0.2586605080831409,
+  "Accuracy_sklearn": 0.14854111405835543,
+  "ROC_AUC": 0.691184308709093,
+  "PR_AUC": 0.35146627111858386,
   "classification_report": {
     "No-Buggy": {
-      "precision": 0.909967845659164,
-      "recall": 0.889937106918239,
-      "f1-score": 0.8998410174880763,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
       "support": 318.0
     },
     "Buggy": {
-      "precision": 0.4696969696969697,
-      "recall": 0.5254237288135594,
-      "f1-score": 0.496,
+      "precision": 0.1497326203208556,
+      "recall": 0.9491525423728814,
+      "f1-score": 0.2586605080831409,
       "support": 59.0
     },
-    "accuracy": 0.8328912466843501,
+    "accuracy": 0.14854111405835543,
     "macro avg": {
-      "precision": 0.6898324076780669,
-      "recall": 0.7076804178658992,
-      "f1-score": 0.6979205087440381,
+      "precision": 0.0748663101604278,
+      "recall": 0.4745762711864407,
+      "f1-score": 0.12933025404157045,
       "support": 377.0
     },
     "weighted avg": {
-      "precision": 0.8410660374847091,
-      "recall": 0.8328912466843501,
-      "f1-score": 0.8366404338493588,
+      "precision": 0.02343295649583682,
+      "recall": 0.14854111405835543,
+      "f1-score": 0.040480026463939826,
       "support": 377.0
     }
   },
   "confusion_matrix": [
     [
-      283,
-      35
+      0,
+      318
     ],
     [
-      28,
-      31
+      3,
+      56
     ]
   ],
-  "training_time_seconds": 0.131377,
+  "training_time_seconds": 0.041297,
   "best_hyperparameters": {
-    "C": 10,
-    "gamma": "auto",
-    "kernel": "rbf"
+    "C": 100,
+    "gamma": 0.001,
+    "kernel": "linear"
   },
-  "timestamp": "2025-11-27T19:55:56.929588"
+  "timestamp": "2025-11-28T13:28:54.007531"
 }

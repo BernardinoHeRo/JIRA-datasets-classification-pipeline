@@ -7,7 +7,11 @@
 #
 # Para cada dataset:
 #   1. Preprocesamiento
-#   2. Balanceo (CSBBoost, HCBOU, SMOTE)
+#   2. Balanceo:
+#       - unbalanced (sin resampling)
+#       - CSBBoost
+#       - HCBOU
+#       - SMOTE
 #   3. Escalado (StandardScaler, RobustScaler)
 #   4. Búsqueda de hiperparámetros (GridSearchCV)
 #   5. Entrenamiento final y evaluación
@@ -15,7 +19,12 @@
 
 from src.config import DATASETS
 from src.preprocessing import preprocess_dataset
-from src.balancing import balance_with_csbboost, balance_with_hcbou, balance_with_smote
+from src.balancing import (
+    balance_with_csbboost,
+    balance_with_hcbou,
+    balance_with_smote,
+    balance_without_resampling,  # baseline sin balanceo
+)
 from src.scaling import scale_balanced
 from src.hyperparameter_tuning import tune_hyperparameters
 from src.final_training import train_final_models
@@ -61,6 +70,8 @@ def main():
             print(f"\n{'='*80}")
             print(f"FASE 2: BALANCEO DE CLASES")
             print(f"{'='*80}")
+
+            balance_without_resampling(ds)
             balance_with_csbboost(ds)
             balance_with_hcbou(ds)
             balance_with_smote(ds)
@@ -72,12 +83,19 @@ def main():
             print(f"FASE 3: ESCALADO DE CARACTERÍSTICAS")
             print(f"{'='*80}")
             
+            # Escalado para baseline sin balanceo
+            scale_balanced(ds, method="unbalanced", scaler_type="standard")
+            scale_balanced(ds, method="unbalanced", scaler_type="robust")
+
+            # Escalado para CSBBoost
             scale_balanced(ds, method="csbboost", scaler_type="standard")
             scale_balanced(ds, method="csbboost", scaler_type="robust")
 
+            # Escalado para HCBOU
             scale_balanced(ds, method="hcbou", scaler_type="standard")
             scale_balanced(ds, method="hcbou", scaler_type="robust")
 
+            # Escalado para SMOTE
             scale_balanced(ds, method="smote", scaler_type="standard")
             scale_balanced(ds, method="smote", scaler_type="robust")
 

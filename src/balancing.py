@@ -7,8 +7,10 @@
 # - Cargar los datos preprocesados de la fase 1
 #   (artifacts/01_preprocessing/<dataset>/X_train.csv, y_train.csv)
 # - Aplicar distintos métodos de balanceo sobre el TRAIN:
+#   * SIN BALANCEO (baseline)
 #   * CSBBoost
 #   * HCBOU
+#   * SMOTE
 # - Guardar los datasets balanceados en:
 #   artifacts/02_balancing/<metodo>/<dataset>/
 #       - X_train_bal.csv
@@ -42,6 +44,52 @@ def _load_preprocessed(dataset_name: str):
     y_test = pd.read_csv(base / "y_test.csv").squeeze("columns")
 
     return X_train, X_test, y_train, y_test
+
+
+# ----------------------------
+# "BALANCEO" SIN RESAMPLING (BASELINE)
+# ----------------------------
+
+def balance_without_resampling(dataset_name: str):
+    """
+    Genera la versión SIN balanceo (baseline).
+
+    - Lee X_train, y_train de 01_preprocessing
+    - Se queda solo con columnas numéricas (igual que CSBBoost/HCBOU/SMOTE)
+    - No aplica ningún método de resampling
+    - Guarda en artifacts/02_balancing/unbalanced/<dataset>/:
+        - X_train_bal.csv
+        - y_train_bal.csv
+    """
+
+    print(f"\n\n========== 'Balanceo' [UNBALANCED] con {dataset_name} ==========")
+    print("================================================================")
+
+    # 1) Cargar datos preprocesados
+    X_train, X_test, y_train, y_test = _load_preprocessed(dataset_name)
+    print(f"[2] 'Balanceo' [UNBALANCED] - Carga de datos preprocesados completa.")
+
+    # 2) Utilizar únicamente columnas numéricas
+    #    Mantiene consistencia con el resto de métodos de balanceo.
+    X_train_num = X_train.select_dtypes(include=[np.number])
+    print(f"[2] 'Balanceo' [UNBALANCED] - Selección de columnas numéricas.")
+    # print(f"[2] 'Balanceo' [UNBALANCED] - Columnas numéricas usadas: {list(X_train_num.columns)}")
+
+    # 3) No se aplica ningún resampling:
+    #    Simplemente usamos el train original como "train balanceado"
+    X_bal = X_train_num
+    y_bal = y_train
+
+    # 4) Carpeta de salida para el baseline sin balanceo
+    out_dir = ARTIFACTS_DIR / "02_balancing" / "unbalanced" / dataset_name
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # 5) Guardar train "balanceado" (realmente sin tocar)
+    X_bal.to_csv(out_dir / "X_train_bal.csv", index=False)
+    y_bal.to_csv(out_dir / "y_train_bal.csv", index=False)
+
+    print(f"[2] 'Balanceo' [UNBALANCED] - Archivos CSV guardados con éxito.")
+    return X_bal, y_bal
 
 
 # ----------------------------
@@ -172,11 +220,10 @@ def balance_with_smote(dataset_name: str):
     print(f"[2] Balanceo [SMOTE] - Carga de datos preprocesados completa.")
 
     # 2) Solo columnas numéricas (igual que en CSBBoost/HCBOU)
-    X_train_num = X_train.select_dtypes(include=["int64", "float64", "int32", "float32"])
+    X_train_num = X_train.select_dtypes(
+        include=["int64", "float64", "int32", "float32"]
+    )
     print(f"[2] Balanceo [SMOTE] - Selección de columnas numéricas.")
-    # Si quieres mantener el detalle de columnas, dejamos esta línea:
-    # print(f"[2] Balanceo [SMOTE] - Columnas numéricas usadas: {list(X_train_num.columns)}")
-    # print(f"[2] Balanceo [SMOTE] - Shape X_train_num: {X_train_num.shape}")
 
     # 3) Aplicar SMOTE con el criterio N/2 por clase
     X_train_bal, y_train_bal = smote_balance(

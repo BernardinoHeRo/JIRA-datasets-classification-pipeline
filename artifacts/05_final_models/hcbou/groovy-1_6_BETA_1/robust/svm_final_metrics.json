@@ -1,65 +1,65 @@
 {
-  "TP": 7,
-  "TN": 139,
-  "FP": 12,
-  "FN": 7,
+  "TP": 14,
+  "TN": 0,
+  "FP": 151,
+  "FN": 0,
   "P": 14,
   "N": 151,
   "Total": 165,
-  "Error": 0.11515151515151516,
-  "Exactitud": 0.8848484848484849,
-  "TP_Rate": 0.5,
-  "FP_Rate": 0.07947019867549669,
-  "Precision": 0.3684210526315789,
-  "Recall": 0.5,
-  "Sensibilidad": 0.5,
-  "Especificidad": 0.9205298013245033,
-  "F1_Score": 0.42424242424242425,
-  "Accuracy_sklearn": 0.8848484848484849,
-  "ROC_AUC": 0.8609271523178808,
-  "PR_AUC": 0.255285599686922,
+  "Error": 0.9151515151515152,
+  "Exactitud": 0.08484848484848485,
+  "TP_Rate": 1.0,
+  "FP_Rate": 1.0,
+  "Precision": 0.08484848484848485,
+  "Recall": 1.0,
+  "Sensibilidad": 1.0,
+  "Especificidad": 0.0,
+  "F1_Score": 0.1564245810055866,
+  "Accuracy_sklearn": 0.08484848484848485,
+  "ROC_AUC": 0.7663197729422896,
+  "PR_AUC": 0.38978766304005524,
   "classification_report": {
     "No-Buggy": {
-      "precision": 0.952054794520548,
-      "recall": 0.9205298013245033,
-      "f1-score": 0.936026936026936,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
       "support": 151.0
     },
     "Buggy": {
-      "precision": 0.3684210526315789,
-      "recall": 0.5,
-      "f1-score": 0.42424242424242425,
+      "precision": 0.08484848484848485,
+      "recall": 1.0,
+      "f1-score": 0.1564245810055866,
       "support": 14.0
     },
-    "accuracy": 0.8848484848484849,
+    "accuracy": 0.08484848484848485,
     "macro avg": {
-      "precision": 0.6602379235760635,
-      "recall": 0.7102649006622517,
-      "f1-score": 0.6801346801346801,
+      "precision": 0.04242424242424243,
+      "recall": 0.5,
+      "f1-score": 0.0782122905027933,
       "support": 165.0
     },
     "weighted avg": {
-      "precision": 0.9025343558148172,
-      "recall": 0.8848484848484849,
-      "f1-score": 0.8926027956330985,
+      "precision": 0.007199265381083564,
+      "recall": 0.08484848484848485,
+      "f1-score": 0.013272388691383105,
       "support": 165.0
     }
   },
   "confusion_matrix": [
     [
-      139,
-      12
+      0,
+      151
     ],
     [
-      7,
-      7
+      0,
+      14
     ]
   ],
-  "training_time_seconds": 0.027659,
+  "training_time_seconds": 0.013637,
   "best_hyperparameters": {
-    "C": 100,
-    "gamma": 0.01,
-    "kernel": "rbf"
+    "C": 1,
+    "gamma": 0.001,
+    "kernel": "linear"
   },
-  "timestamp": "2025-11-27T19:57:41.473805"
+  "timestamp": "2025-11-28T13:31:08.481926"
 }

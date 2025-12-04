@@ -1,15 +1,15 @@
 {
   "best_params": {
-    "C": 100,
-    "gamma": "auto",
+    "C": 10,
+    "gamma": 0.01,
     "kernel": "rbf"
   },
-  "best_cv_score": 0.9295351820576037,
+  "best_cv_score": 0.960494856825132,
   "test_metrics": {
-    "accuracy": 0.896969696969697,
-    "precision": 0.36363636363636365,
-    "recall": 0.2857142857142857,
-    "f1_score": 0.32
+    "accuracy": 0.8666666666666667,
+    "precision": 0.3181818181818182,
+    "recall": 0.5,
+    "f1_score": 0.3888888888888889
   },
-  "timestamp": "2025-11-27T19:57:18.554329"
+  "timestamp": "2025-11-28T13:30:43.486750"
 }

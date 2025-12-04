@@ -2,12 +2,12 @@
   "best_params": {
     "var_smoothing": 1e-09
   },
-  "best_cv_score": 0.32627088916639774,
+  "best_cv_score": 0.1995572066494052,
   "test_metrics": {
     "accuracy": 0.8063380281690141,
     "precision": 0.5833333333333334,
     "recall": 0.12280701754385964,
     "f1_score": 0.2028985507246377
   },
-  "timestamp": "2025-11-27T19:59:10.928017"
+  "timestamp": "2025-11-28T13:33:08.888481"
 }

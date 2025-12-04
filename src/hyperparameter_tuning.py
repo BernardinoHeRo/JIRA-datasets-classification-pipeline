@@ -83,7 +83,7 @@ def get_models():
     return models
 
 
-def perform_grid_search(model, param_grid, X_train, y_train, cv=3, model_name=''):
+def perform_grid_search(model, param_grid, X_train, y_train, cv=10, model_name=''):
     """Realiza Grid Search con validación cruzada"""
     if model_name == 'svm':
         n_jobs_inner = 1
@@ -99,7 +99,7 @@ def perform_grid_search(model, param_grid, X_train, y_train, cv=3, model_name=''
         estimator=model,
         param_grid=param_grid,
         cv=cv,
-        scoring='f1',
+        scoring='recall',
         n_jobs=-1,
         verbose=0,
         return_train_score=False,

@@ -1,66 +1,66 @@
 {
   "TP": 10,
-  "TN": 294,
-  "FP": 33,
+  "TN": 280,
+  "FP": 47,
   "FN": 16,
   "P": 26,
   "N": 327,
   "Total": 353,
-  "Error": 0.1388101983002833,
-  "Exactitud": 0.8611898016997167,
+  "Error": 0.17847025495750707,
+  "Exactitud": 0.8215297450424929,
   "TP_Rate": 0.38461538461538464,
-  "FP_Rate": 0.10091743119266056,
-  "Precision": 0.23255813953488372,
+  "FP_Rate": 0.1437308868501529,
+  "Precision": 0.17543859649122806,
   "Recall": 0.38461538461538464,
   "Sensibilidad": 0.38461538461538464,
-  "Especificidad": 0.8990825688073395,
-  "F1_Score": 0.2898550724637681,
-  "Accuracy_sklearn": 0.8611898016997167,
-  "ROC_AUC": 0.6292637026581981,
-  "PR_AUC": 0.31473923422633726,
+  "Especificidad": 0.8562691131498471,
+  "F1_Score": 0.24096385542168675,
+  "Accuracy_sklearn": 0.8215297450424929,
+  "ROC_AUC": 0.6146788990825688,
+  "PR_AUC": 0.18613090298642704,
   "classification_report": {
     "No-Buggy": {
-      "precision": 0.9483870967741935,
-      "recall": 0.8990825688073395,
-      "f1-score": 0.9230769230769231,
+      "precision": 0.9459459459459459,
+      "recall": 0.8562691131498471,
+      "f1-score": 0.898876404494382,
       "support": 327.0
     },
     "Buggy": {
-      "precision": 0.23255813953488372,
+      "precision": 0.17543859649122806,
       "recall": 0.38461538461538464,
-      "f1-score": 0.2898550724637681,
+      "f1-score": 0.24096385542168675,
       "support": 26.0
     },
-    "accuracy": 0.8611898016997167,
+    "accuracy": 0.8215297450424929,
     "macro avg": {
-      "precision": 0.5904726181545387,
-      "recall": 0.6418489767113621,
-      "f1-score": 0.6064659977703456,
+      "precision": 0.560692271218587,
+      "recall": 0.6204422488826159,
+      "f1-score": 0.5699201299580343,
       "support": 353.0
     },
     "weighted avg": {
-      "precision": 0.8956631509152075,
-      "recall": 0.8611898016997167,
-      "f1-score": 0.8764373533433764,
+      "precision": 0.8891946964110375,
+      "recall": 0.8215297450424929,
+      "f1-score": 0.8504182564040419,
       "support": 353.0
     }
   },
   "confusion_matrix": [
     [
-      294,
-      33
+      280,
+      47
     ],
     [
       16,
       10
     ]
   ],
-  "training_time_seconds": 0.017634,
+  "training_time_seconds": 0.015568,
   "best_hyperparameters": {
     "criterion": "gini",
-    "max_depth": 20,
-    "min_samples_leaf": 2,
+    "max_depth": 10,
+    "min_samples_leaf": 1,
     "min_samples_split": 5
   },
-  "timestamp": "2025-11-27T20:00:52.494575"
+  "timestamp": "2025-11-28T13:35:22.087115"
 }

@@ -87,7 +87,13 @@ def create_model_with_params(model_name, best_params):
         Modelo de sklearn configurado
     """
     if model_name == 'svm':
-        return SVC(**best_params, random_state=42, probability=True)
+        return SVC(
+            **best_params,
+            random_state=42,
+            cache_size=2000,
+            max_iter=10000,
+            probability=False,  # ≪≪ IMPORTANTE
+        )
     elif model_name == 'naive_bayes_gaussian':
         return GaussianNB(**best_params)
     elif model_name == 'decision_tree':

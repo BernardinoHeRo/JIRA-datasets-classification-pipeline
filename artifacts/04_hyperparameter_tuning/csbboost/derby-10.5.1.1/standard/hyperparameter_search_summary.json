@@ -3,7 +3,7 @@
     "best_params": {
       "var_smoothing": 1e-09
     },
-    "best_cv_score": 0.5606227808013996,
+    "best_cv_score": 0.4233020416538422,
     "test_metrics": {
       "accuracy": 0.8484288354898336,
       "precision": 0.4657534246575342,
@@ -13,36 +13,36 @@
     "n_combinations_tested": 6,
     "cv_folds": 3,
     "total_fits": 18,
-    "time_seconds": 3.983198,
+    "time_seconds": 4.012811,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-27T19:56:06.128769"
+    "timestamp": "2025-11-28T13:29:18.995075"
   },
   "decision_tree": {
     "best_params": {
-      "criterion": "entropy",
-      "max_depth": 20,
+      "criterion": "gini",
+      "max_depth": 10,
       "min_samples_leaf": 1,
-      "min_samples_split": 20
+      "min_samples_split": 2
     },
-    "best_cv_score": 0.832627607020811,
+    "best_cv_score": 0.8438032215040526,
     "test_metrics": {
-      "accuracy": 0.8059149722735675,
-      "precision": 0.37719298245614036,
-      "recall": 0.5584415584415584,
-      "f1_score": 0.450261780104712
+      "accuracy": 0.7652495378927912,
+      "precision": 0.323943661971831,
+      "recall": 0.5974025974025974,
+      "f1_score": 0.4200913242009132
     },
     "n_combinations_tested": 160,
     "cv_folds": 3,
     "total_fits": 480,
-    "time_seconds": 6.128107,
+    "time_seconds": 6.047947,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-27T19:56:08.274241"
+    "timestamp": "2025-11-28T13:29:21.030810"
   },
   "svm": {
     "best_params": {
@@ -50,7 +50,7 @@
       "gamma": 0.1,
       "kernel": "rbf"
     },
-    "best_cv_score": 0.8783302128020175,
+    "best_cv_score": 0.9177285318559557,
     "test_metrics": {
       "accuracy": 0.789279112754159,
       "precision": 0.29213483146067415,
@@ -60,11 +60,11 @@
     "n_combinations_tested": 72,
     "cv_folds": 3,
     "total_fits": 216,
-    "time_seconds": 6.275948,
+    "time_seconds": 6.18544,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-27T19:56:08.420110"
+    "timestamp": "2025-11-28T13:29:21.166566"
   }
 }

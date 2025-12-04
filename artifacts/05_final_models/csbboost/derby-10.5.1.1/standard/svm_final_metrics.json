@@ -17,7 +17,7 @@
   "F1_Score": 0.3132530120481928,
   "Accuracy_sklearn": 0.789279112754159,
   "ROC_AUC": 0.7328145991939096,
-  "PR_AUC": 0.26533001471709083,
+  "PR_AUC": 0.2653300147170908,
   "classification_report": {
     "No-Buggy": {
       "precision": 0.8871681415929203,
@@ -55,11 +55,11 @@
       26
     ]
   ],
-  "training_time_seconds": 0.429795,
+  "training_time_seconds": 0.082322,
   "best_hyperparameters": {
     "C": 1000,
     "gamma": 0.1,
     "kernel": "rbf"
   },
-  "timestamp": "2025-11-27T19:56:51.284273"
+  "timestamp": "2025-11-28T13:30:05.397716"
 }

@@ -55,9 +55,9 @@
       9
     ]
   ],
-  "training_time_seconds": 0.000861,
+  "training_time_seconds": 0.000817,
   "best_hyperparameters": {
     "var_smoothing": 1e-09
   },
-  "timestamp": "2025-11-27T19:59:14.521843"
+  "timestamp": "2025-11-28T13:33:13.649986"
 }

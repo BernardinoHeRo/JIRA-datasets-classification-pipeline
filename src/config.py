@@ -34,7 +34,7 @@ PHASE_01_PREPROCESSING_DIR = ARTIFACTS_DIR / "01_preprocessing"
 PHASE_02_BALANCING_DIR = ARTIFACTS_DIR / "02_balancing"
 PHASE_03_SCALING_DIR = ARTIFACTS_DIR / "03_scaling"
 PHASE_04_HYPERPARAMETER_DIR = ARTIFACTS_DIR / "04_hyperparameter_tuning"
-PHASE_05_FINAL_DIR = ARTIFACTS_DIR / "05_final_models"  # ← AGREGAR ESTA LÍNEA
+PHASE_05_FINAL_DIR = ARTIFACTS_DIR / "05_final_models"
 
 # Nombre de la columna objetivo en tus datasets JIRA
 TARGET_COL = "RealBug"
@@ -54,7 +54,8 @@ DATASETS = [
 ]
 
 # Métodos de balanceo disponibles
-BALANCING_METHODS = ["csbboost", "hcbou", "smote"]
+# "unbalanced" = baseline sin resampling (usa el train original)
+BALANCING_METHODS = ["unbalanced", "csbboost", "hcbou", "smote"]
 
 # Tipos de escalado disponibles
 SCALING_TYPES = ["standard", "robust"]

@@ -1,65 +1,65 @@
 {
-  "TP": 31,
-  "TN": 280,
-  "FP": 38,
-  "FN": 28,
+  "TP": 59,
+  "TN": 0,
+  "FP": 318,
+  "FN": 0,
   "P": 59,
   "N": 318,
   "Total": 377,
-  "Error": 0.17506631299734748,
-  "Exactitud": 0.8249336870026526,
-  "TP_Rate": 0.5254237288135594,
-  "FP_Rate": 0.11949685534591195,
-  "Precision": 0.4492753623188406,
-  "Recall": 0.5254237288135594,
-  "Sensibilidad": 0.5254237288135594,
-  "Especificidad": 0.8805031446540881,
-  "F1_Score": 0.484375,
-  "Accuracy_sklearn": 0.8249336870026526,
-  "ROC_AUC": 0.8293358916959814,
-  "PR_AUC": 0.4993512244773763,
+  "Error": 0.843501326259947,
+  "Exactitud": 0.15649867374005305,
+  "TP_Rate": 1.0,
+  "FP_Rate": 1.0,
+  "Precision": 0.15649867374005305,
+  "Recall": 1.0,
+  "Sensibilidad": 1.0,
+  "Especificidad": 0.0,
+  "F1_Score": 0.2706422018348624,
+  "Accuracy_sklearn": 0.15649867374005305,
+  "ROC_AUC": 0.8459918985182817,
+  "PR_AUC": 0.4383901717970041,
   "classification_report": {
     "No-Buggy": {
-      "precision": 0.9090909090909091,
-      "recall": 0.8805031446540881,
-      "f1-score": 0.8945686900958466,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
       "support": 318.0
     },
     "Buggy": {
-      "precision": 0.4492753623188406,
-      "recall": 0.5254237288135594,
-      "f1-score": 0.484375,
+      "precision": 0.15649867374005305,
+      "recall": 1.0,
+      "f1-score": 0.2706422018348624,
       "support": 59.0
     },
-    "accuracy": 0.8249336870026526,
+    "accuracy": 0.15649867374005305,
     "macro avg": {
-      "precision": 0.6791831357048748,
-      "recall": 0.7029634367338238,
-      "f1-score": 0.6894718450479234,
+      "precision": 0.07824933687002653,
+      "recall": 0.5,
+      "f1-score": 0.1353211009174312,
       "support": 377.0
     },
     "weighted avg": {
-      "precision": 0.8371303858560228,
-      "recall": 0.8249336870026526,
-      "f1-score": 0.8303739216193082,
+      "precision": 0.02449183488239557,
+      "recall": 0.15649867374005305,
+      "f1-score": 0.042355145645243716,
       "support": 377.0
     }
   },
   "confusion_matrix": [
     [
-      280,
-      38
+      0,
+      318
     ],
     [
-      28,
-      31
+      0,
+      59
     ]
   ],
-  "training_time_seconds": 0.132003,
+  "training_time_seconds": 0.036473,
   "best_hyperparameters": {
-    "C": 100,
-    "gamma": "scale",
+    "C": 0.01,
+    "gamma": 1,
     "kernel": "rbf"
   },
-  "timestamp": "2025-11-27T19:55:53.779038"
+  "timestamp": "2025-11-28T13:28:51.322848"
 }
