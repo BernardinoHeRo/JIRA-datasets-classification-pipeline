@@ -2,12 +2,27 @@
   "best_params": {
     "var_smoothing": 0.0001
   },
-  "best_cv_score": 0.5632183908045977,
+  "best_cv_score": 0.6094553717153175,
   "test_metrics": {
     "accuracy": 0.7641509433962265,
     "precision": 0.44642857142857145,
     "recall": 0.5681818181818182,
-    "f1_score": 0.5
+    "f1_score": 0.5,
+    "f2_score": 0.5387931034482759
   },
-  "timestamp": "2025-11-28T13:31:16.572763"
+  "timestamp": "2025-12-11T09:14:36.984547",
+  "confusion_matrix": [
+    [
+      137,
+      31
+    ],
+    [
+      19,
+      25
+    ]
+  ],
+  "labels": [
+    0,
+    1
+  ]
 }

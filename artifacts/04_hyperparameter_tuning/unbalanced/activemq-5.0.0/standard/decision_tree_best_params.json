@@ -1,16 +1,31 @@
 {
   "best_params": {
-    "criterion": "entropy",
-    "max_depth": 5,
-    "min_samples_leaf": 1,
-    "min_samples_split": 20
+    "criterion": "gini",
+    "max_depth": 3,
+    "min_samples_leaf": 4,
+    "min_samples_split": 2
   },
-  "best_cv_score": 0.6794871794871794,
+  "best_cv_score": 0.6206450456945425,
   "test_metrics": {
-    "accuracy": 0.8806366047745358,
-    "precision": 0.64,
-    "recall": 0.5423728813559322,
-    "f1_score": 0.5871559633027523
+    "accuracy": 0.883289124668435,
+    "precision": 0.6153846153846154,
+    "recall": 0.6779661016949152,
+    "f1_score": 0.6451612903225806,
+    "f2_score": 0.6644518272425249
   },
-  "timestamp": "2025-11-28T13:27:57.830182"
+  "timestamp": "2025-12-11T09:10:01.790659",
+  "confusion_matrix": [
+    [
+      293,
+      25
+    ],
+    [
+      19,
+      40
+    ]
+  ],
+  "labels": [
+    0,
+    1
+  ]
 }

@@ -16,6 +16,11 @@
   "Especificidad": 0.9174311926605505,
   "F1_Score": 0.34375,
   "Accuracy_sklearn": 0.8810198300283286,
+  "F2_Score": 0.3873239436619718,
+  "Balanced_Accuracy": 0.6702540578687368,
+  "BER": 0.3297459421312632,
+  "MCC": 0.28697293703089116,
+  "Accuracy": 0.8810198300283286,
   "ROC_AUC": 0.772994589508351,
   "PR_AUC": 0.30298609744959754,
   "classification_report": {
@@ -55,9 +60,9 @@
       11
     ]
   ],
-  "training_time_seconds": 0.000895,
+  "training_time_seconds": 0.000888,
   "best_hyperparameters": {
-    "var_smoothing": 1e-06
+    "var_smoothing": 0.0001
   },
-  "timestamp": "2025-11-28T13:35:21.793762"
+  "timestamp": "2025-12-11T09:19:53.752163"
 }

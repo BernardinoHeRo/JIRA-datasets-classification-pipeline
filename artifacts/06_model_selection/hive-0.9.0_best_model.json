@@ -1,0 +1,90 @@
+{
+  "dataset": "hive-0.9.0",
+  "selected_model": {
+    "model_name": "decision_tree",
+    "balancing_method": "csbboost",
+    "scaler_type": "standard"
+  },
+  "selection_criteria": {
+    "description": "Modelo seleccionado maximizando Recall (clase defectuosa / Buggy), luego MCC, luego minimizando BER, y en caso de empate usando Precision y Exactitud como criterios secundarios.",
+    "priority_order": [
+      "Recall (Buggy) \u2013 prioridad m\u00e1xima (no dejar pasar defectuosos reales)",
+      "MCC \u2013 calidad global del clasificador considerando ambas clases",
+      "BER \u2013 menor es mejor; balance de errores en No-Buggy y Buggy",
+      "Precision (Buggy) \u2013 evitar excesivos falsos positivos",
+      "Exactitud (Accuracy) \u2013 criterio de desempate adicional"
+    ]
+  },
+  "metrics": {
+    "TP": 48,
+    "TN": 189,
+    "FP": 38,
+    "FN": 9,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.16549295774647887,
+    "Exactitud": 0.8345070422535211,
+    "TP_Rate": 0.8421052631578947,
+    "FP_Rate": 0.16740088105726872,
+    "Precision": 0.5581395348837209,
+    "Recall": 0.8421052631578947,
+    "Sensibilidad": 0.8421052631578947,
+    "Especificidad": 0.8325991189427313,
+    "F1_Score": 0.6713286713286714,
+    "Accuracy_sklearn": 0.8345070422535211,
+    "F2_Score": 0.7643312101910829,
+    "Balanced_Accuracy": 0.837352191050313,
+    "BER": 0.162647808949687,
+    "MCC": 0.5881418272874985,
+    "Accuracy": 0.8345070422535211,
+    "ROC_AUC": 0.8261457608779658,
+    "PR_AUC": 0.6052155215708811,
+    "classification_report": {
+      "No-Buggy": {
+        "precision": 0.9545454545454546,
+        "recall": 0.8325991189427313,
+        "f1-score": 0.8894117647058823,
+        "support": 227.0
+      },
+      "Buggy": {
+        "precision": 0.5581395348837209,
+        "recall": 0.8421052631578947,
+        "f1-score": 0.6713286713286714,
+        "support": 57.0
+      },
+      "accuracy": 0.8345070422535211,
+      "macro avg": {
+        "precision": 0.7563424947145878,
+        "recall": 0.837352191050313,
+        "f1-score": 0.7803702180172769,
+        "support": 284.0
+      },
+      "weighted avg": {
+        "precision": 0.8749851115147544,
+        "recall": 0.8345070422535211,
+        "f1-score": 0.8456415663872168,
+        "support": 284.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        189,
+        38
+      ],
+      [
+        9,
+        48
+      ]
+    ],
+    "training_time_seconds": 0.018064,
+    "best_hyperparameters": {
+      "criterion": "gini",
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2
+    },
+    "timestamp": "2025-12-11T09:17:10.111433"
+  },
+  "timestamp": "2025-12-11T09:20:35.314145"
+}

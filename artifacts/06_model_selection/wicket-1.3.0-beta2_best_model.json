@@ -1,0 +1,87 @@
+{
+  "dataset": "wicket-1.3.0-beta2",
+  "selected_model": {
+    "model_name": "naive_bayes_gaussian",
+    "balancing_method": "smote",
+    "scaler_type": "standard"
+  },
+  "selection_criteria": {
+    "description": "Modelo seleccionado maximizando Recall (clase defectuosa / Buggy), luego MCC, luego minimizando BER, y en caso de empate usando Precision y Exactitud como criterios secundarios.",
+    "priority_order": [
+      "Recall (Buggy) \u2013 prioridad m\u00e1xima (no dejar pasar defectuosos reales)",
+      "MCC \u2013 calidad global del clasificador considerando ambas clases",
+      "BER \u2013 menor es mejor; balance de errores en No-Buggy y Buggy",
+      "Precision (Buggy) \u2013 evitar excesivos falsos positivos",
+      "Exactitud (Accuracy) \u2013 criterio de desempate adicional"
+    ]
+  },
+  "metrics": {
+    "TP": 11,
+    "TN": 300,
+    "FP": 27,
+    "FN": 15,
+    "P": 26,
+    "N": 327,
+    "Total": 353,
+    "Error": 0.11898016997167139,
+    "Exactitud": 0.8810198300283286,
+    "TP_Rate": 0.4230769230769231,
+    "FP_Rate": 0.08256880733944955,
+    "Precision": 0.2894736842105263,
+    "Recall": 0.4230769230769231,
+    "Sensibilidad": 0.4230769230769231,
+    "Especificidad": 0.9174311926605505,
+    "F1_Score": 0.34375,
+    "Accuracy_sklearn": 0.8810198300283286,
+    "F2_Score": 0.3873239436619718,
+    "Balanced_Accuracy": 0.6702540578687368,
+    "BER": 0.3297459421312632,
+    "MCC": 0.28697293703089116,
+    "Accuracy": 0.8810198300283286,
+    "ROC_AUC": 0.772994589508351,
+    "PR_AUC": 0.30298609744959754,
+    "classification_report": {
+      "No-Buggy": {
+        "precision": 0.9523809523809523,
+        "recall": 0.9174311926605505,
+        "f1-score": 0.9345794392523364,
+        "support": 327.0
+      },
+      "Buggy": {
+        "precision": 0.2894736842105263,
+        "recall": 0.4230769230769231,
+        "f1-score": 0.34375,
+        "support": 26.0
+      },
+      "accuracy": 0.8810198300283286,
+      "macro avg": {
+        "precision": 0.6209273182957393,
+        "recall": 0.6702540578687368,
+        "f1-score": 0.6391647196261683,
+        "support": 353.0
+      },
+      "weighted avg": {
+        "precision": 0.9035549212975782,
+        "recall": 0.8810198300283286,
+        "f1-score": 0.89106225675783,
+        "support": 353.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        300,
+        27
+      ],
+      [
+        15,
+        11
+      ]
+    ],
+    "training_time_seconds": 0.000888,
+    "best_hyperparameters": {
+      "var_smoothing": 0.0001
+    },
+    "timestamp": "2025-12-11T09:19:53.752163"
+  },
+  "timestamp": "2025-12-11T09:20:35.318780"
+}

@@ -43,8 +43,6 @@ def preprocess_dataset(dataset_name: str):
         Conjuntos de entrenamiento y prueba, ya separados.
     """
 
-    # print(f"\n[1] Preprocesamiento: {dataset_name}")
-
     # ----------------------------
     # 1) Cargar el CSV original
     # ----------------------------
@@ -52,6 +50,7 @@ def preprocess_dataset(dataset_name: str):
     df = pd.read_csv(csv_path)
     print(f"[1] Preprocesamiento - Dataset original cargado: {dataset_name}")
     print(f"[1] Preprocesamiento - Dimensiones originales: {df.shape}")
+
     # ----------------------------
     # 2) Eliminar columnas no deseadas
     #    (solo si existen en el DataFrame)
@@ -61,12 +60,27 @@ def preprocess_dataset(dataset_name: str):
         df = df.drop(columns=cols_to_drop)
         print(f"[1] Preprocesamiento - Columnas eliminadas: {cols_to_drop}")
         print(f"[1] Preprocesamiento - Dimensiones nuevas: {df.shape}")
+
     # ----------------------------
     # 3) Separar X (features) e y (target)
     # ----------------------------
     X = df.drop(columns=[TARGET_COL])
-    # Convertimos RealBug a int (0/1) por seguridad
-    y = df[TARGET_COL].astype(int)
+
+    # Aseguramos que el target esté en formato 0/1
+    y_raw = df[TARGET_COL]
+
+    # Si ya es numérico 0/1, esto basta:
+    # (si en algún dataset viniera como bool o similar, se puede extender el mapping)
+    y = y_raw.astype(int)
+
+    # Verificación extra: asegurar que las etiquetas sean {0,1}
+    unique_labels = sorted(y.unique().tolist())
+    print(f"[1] Preprocesamiento - Etiquetas únicas en y: {unique_labels}")
+    if not set(unique_labels).issubset({0, 1}):
+        raise ValueError(
+            f"[1] ERROR: La columna '{TARGET_COL}' contiene valores fuera de {{0,1}}: "
+            f"{unique_labels}. Normaliza el target antes de continuar."
+        )
 
     # ----------------------------
     # 4) Hacer split Train/Test (80/20, estratificado)
@@ -80,6 +94,14 @@ def preprocess_dataset(dataset_name: str):
     )
     print(f"[1] Preprocesamiento - División estratificada 80/20 realizada.")
     print(f"[1] Preprocesamiento - X_train: {X_train.shape}, X_test: {X_test.shape}")
+    print(
+        f"[1] Preprocesamiento - Distribución y_train: "
+        f"{y_train.value_counts(normalize=True).to_dict()}"
+    )
+    print(
+        f"[1] Preprocesamiento - Distribución y_test:  "
+        f"{y_test.value_counts(normalize=True).to_dict()}"
+    )
 
     # ----------------------------
     # 5) Crear carpeta de salida de la fase 1
@@ -95,7 +117,7 @@ def preprocess_dataset(dataset_name: str):
     X_test.to_csv(out_dir / "X_test.csv", index=False)
     y_train.to_csv(out_dir / "y_train.csv", index=False)
     y_test.to_csv(out_dir / "y_test.csv", index=False)
-    print(f"[1] Preprocesamiento - Archivos CSV guardados en con éxito")
+    print(f"[1] Preprocesamiento - Archivos CSV guardados con éxito en {out_dir}")
 
     # Devolvemos también en memoria por si quieres usarlo inmediatamente
     return X_train, X_test, y_train, y_test

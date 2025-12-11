@@ -29,7 +29,8 @@ from src.scaling import scale_balanced
 from src.hyperparameter_tuning import tune_hyperparameters
 from src.final_training import train_final_models
 from src.logger import setup_logging, close_logging
-
+from src.model_selection import select_best_models
+from src.utils.label_checks import assert_buggy_label_is_one
 
 def main():
     """
@@ -105,7 +106,7 @@ def main():
             print(f"\n{'='*80}")
             print(f"FASE 4: BÚSQUEDA DE HIPERPARÁMETROS (GRIDSEARCH)")
             print(f"{'='*80}")
-
+            assert_buggy_label_is_one(ds)
             # Ejecutar búsqueda de hiperparámetros para todas las combinaciones
             # (métodos de balanceo × tipos de escalado) para este dataset
             tune_hyperparameters(ds)
@@ -120,6 +121,24 @@ def main():
             # Entrenar modelos finales con los mejores hiperparámetros encontrados
             train_final_models(ds)
 
+            # ----------------------------
+            # FASE 6: Selección del mejor modelo final
+            # ----------------------------
+            
+            print(f"\n{'='*80}")
+            print(f"FASE 6: SELECCIÓN DEL MEJOR MODELO FINAL")
+            print(f"{'='*80}")
+            
+            select_best_models(ds)
+            
+            # Si solo se desea ejecutar este paso para todos los datasets,
+            # en terminal se hace de esta manera
+            # python -m src.model_selection \ activemq-5.0.0 \ derby-10.5.1.1 \ groovy-1_6_BETA_1 \ hbase-0.94.0 \ hive-0.9.0 \ jruby-1.1 \ wicket-1.3.0-beta2
+
+            
+            # ----------------------------
+            # FIN DEL PIPELINE COMPLETO
+            # ----------------------------
             print(f"\n{'='*80}")
             print(f"✓ PIPELINE COMPLETO PARA {ds}")
             print(f"{'='*80}\n")

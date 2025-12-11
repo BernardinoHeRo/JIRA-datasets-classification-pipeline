@@ -4,30 +4,40 @@
   "scaler_type": "robust",
   "models": {
     "svm": {
-      "F1_Score": 0.34375,
-      "Exactitud": 0.20754716981132076,
-      "Precision": 0.20754716981132076,
-      "Recall": 1.0,
-      "Sensibilidad": 1.0,
-      "Especificidad": 0.0,
-      "Error": 0.7924528301886793,
-      "TP_Rate": 1.0,
-      "FP_Rate": 1.0,
-      "ROC_AUC": 0.754193722943723,
+      "F1_Score": 0.0,
+      "F2_Score": 0.0,
+      "Exactitud": 0.7924528301886793,
+      "Accuracy": 0.7924528301886793,
+      "Balanced_Accuracy": 0.5,
+      "BER": 0.5,
+      "MCC": 0.0,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "Sensibilidad": 0.0,
+      "Especificidad": 1.0,
+      "Error": 0.20754716981132076,
+      "TP_Rate": 0.0,
+      "FP_Rate": 0.0,
+      "ROC_AUC": 0.6250000000000001,
       "confusion_matrix": [
         [
-          0,
-          168
+          168,
+          0
         ],
         [
-          0,
-          44
+          44,
+          0
         ]
       ]
     },
     "naive_bayes_gaussian": {
       "F1_Score": 0.34509803921568627,
+      "F2_Score": 0.5684754521963824,
       "Exactitud": 0.21226415094339623,
+      "Accuracy": 0.21226415094339623,
+      "Balanced_Accuracy": 0.5029761904761905,
+      "BER": 0.49702380952380953,
+      "MCC": 0.03523144612071956,
       "Precision": 0.20853080568720378,
       "Recall": 1.0,
       "Sensibilidad": 1.0,
@@ -48,27 +58,32 @@
       ]
     },
     "decision_tree": {
-      "F1_Score": 0.5569620253164557,
-      "Exactitud": 0.8349056603773585,
-      "Precision": 0.6285714285714286,
-      "Recall": 0.5,
-      "Sensibilidad": 0.5,
-      "Especificidad": 0.9226190476190477,
-      "Error": 0.1650943396226415,
-      "TP_Rate": 0.5,
-      "FP_Rate": 0.07738095238095238,
-      "ROC_AUC": 0.7529761904761906,
+      "F1_Score": 0.4883720930232558,
+      "F2_Score": 0.481651376146789,
+      "Exactitud": 0.7924528301886793,
+      "Accuracy": 0.7924528301886793,
+      "Balanced_Accuracy": 0.6761363636363636,
+      "BER": 0.32386363636363635,
+      "MCC": 0.3584353997987322,
+      "Precision": 0.5,
+      "Recall": 0.4772727272727273,
+      "Sensibilidad": 0.4772727272727273,
+      "Especificidad": 0.875,
+      "Error": 0.20754716981132076,
+      "TP_Rate": 0.4772727272727273,
+      "FP_Rate": 0.125,
+      "ROC_AUC": 0.744724025974026,
       "confusion_matrix": [
         [
-          155,
-          13
+          147,
+          21
         ],
         [
-          22,
-          22
+          23,
+          21
         ]
       ]
     }
   },
-  "timestamp": "2025-11-28T13:32:07.592684"
+  "timestamp": "2025-12-11T09:15:45.477272"
 }
