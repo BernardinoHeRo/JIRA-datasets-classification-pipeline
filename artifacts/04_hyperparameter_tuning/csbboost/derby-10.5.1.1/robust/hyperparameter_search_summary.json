@@ -3,7 +3,7 @@
     "best_params": {
       "var_smoothing": 1e-09
     },
-    "best_cv_score": 0.02033959166923156,
+    "best_cv_score": 0.022196738022426093,
     "test_metrics": {
       "accuracy": 0.8521256931608133,
       "precision": 0.2857142857142857,
@@ -11,38 +11,38 @@
       "f1_score": 0.047619047619047616
     },
     "n_combinations_tested": 6,
-    "cv_folds": 3,
-    "total_fits": 18,
-    "time_seconds": 3.725332,
+    "cv_folds": 10,
+    "total_fits": 60,
+    "time_seconds": 2.8238,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:29:27.172484"
+    "timestamp": "2025-12-12T02:10:52.352215"
   },
   "decision_tree": {
     "best_params": {
-      "criterion": "gini",
-      "max_depth": 10,
+      "criterion": "entropy",
+      "max_depth": 20,
       "min_samples_leaf": 1,
       "min_samples_split": 2
     },
-    "best_cv_score": 0.8419539345439623,
+    "best_cv_score": 0.8484539585457018,
     "test_metrics": {
-      "accuracy": 0.7652495378927912,
-      "precision": 0.323943661971831,
-      "recall": 0.5974025974025974,
-      "f1_score": 0.4200913242009132
+      "accuracy": 0.7818853974121996,
+      "precision": 0.33858267716535434,
+      "recall": 0.5584415584415584,
+      "f1_score": 0.4215686274509804
     },
     "n_combinations_tested": 160,
-    "cv_folds": 3,
-    "total_fits": 480,
-    "time_seconds": 6.013527,
+    "cv_folds": 10,
+    "total_fits": 1600,
+    "time_seconds": 7.438604,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:29:29.460949"
+    "timestamp": "2025-12-12T02:10:56.967600"
   },
   "svm": {
     "best_params": {
@@ -50,7 +50,7 @@
       "gamma": 0.1,
       "kernel": "rbf"
     },
-    "best_cv_score": 0.9889042782394583,
+    "best_cv_score": 0.9824243968739381,
     "test_metrics": {
       "accuracy": 0.6765249537892791,
       "precision": 0.25980392156862747,
@@ -58,13 +58,13 @@
       "f1_score": 0.37722419928825623
     },
     "n_combinations_tested": 72,
-    "cv_folds": 3,
-    "total_fits": 216,
-    "time_seconds": 6.103203,
+    "cv_folds": 10,
+    "total_fits": 720,
+    "time_seconds": 44.89982,
     "dataset_info": {
       "n_samples": 2164,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:29:29.548978"
+    "timestamp": "2025-12-12T02:11:34.426705"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "OWN_COMMIT",
+    "Added_lines",
+    "Del_lines",
+    "MAJOR_COMMIT",
+    "DDEV",
+    "CountStmt",
+    "CountPath_Mean",
+    "CountStmtDecl",
+    "CountLineCodeDecl",
+    "CountLineCode",
+    "CountLineCodeExe",
+    "OWN_LINE",
+    "MaxNesting_Mean",
+    "SumCyclomaticStrict",
+    "CountLineComment",
+    "ADEV",
+    "CountSemicolon",
+    "CountLine",
+    "RatioCommentToCode",
+    "AvgLine"
+  ]
+}

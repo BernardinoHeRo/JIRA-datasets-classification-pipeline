@@ -3,14 +3,22 @@
     "criterion": "entropy",
     "max_depth": 20,
     "min_samples_leaf": 1,
-    "min_samples_split": 5
+    "min_samples_split": 2
   },
-  "best_cv_score": 0.8745074862096138,
+  "best_cv_score": 0.8656015037593985,
   "test_metrics": {
-    "accuracy": 0.7640845070422535,
-    "precision": 0.44680851063829785,
-    "recall": 0.7368421052631579,
-    "f1_score": 0.5562913907284768
+    "accuracy": 0.7605633802816901,
+    "precision": 0.44086021505376344,
+    "recall": 0.7192982456140351,
+    "f1_score": 0.5466666666666666
   },
-  "timestamp": "2025-11-28T13:32:47.078939"
+  "timestamp": "2025-12-12T02:19:28.457739",
+  "cv_folds": 10,
+  "n_combinations_tested": 160,
+  "total_fits": 1600,
+  "time_seconds": 5.117031,
+  "dataset_info": {
+    "n_samples": 1132,
+    "n_features": 65
+  }
 }

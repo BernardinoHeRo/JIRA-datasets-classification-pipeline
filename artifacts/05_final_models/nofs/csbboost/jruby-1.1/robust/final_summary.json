@@ -1,0 +1,109 @@
+{
+  "svm": {
+    "TP": 12,
+    "TN": 95,
+    "FP": 35,
+    "FN": 5,
+    "P": 17,
+    "N": 130,
+    "Total": 147,
+    "Error": 0.272108843537415,
+    "Exactitud": 0.7278911564625851,
+    "TP_Rate": 0.7058823529411765,
+    "FP_Rate": 0.2692307692307692,
+    "Precision": 0.2553191489361702,
+    "Recall": 0.7058823529411765,
+    "Sensibilidad": 0.7058823529411765,
+    "Especificidad": 0.7307692307692307,
+    "F1_Score": 0.375,
+    "Accuracy_sklearn": 0.7278911564625851,
+    "best_hyperparameters": {
+      "C": 10,
+      "gamma": 0.1,
+      "kernel": "rbf"
+    },
+    "cv_best_score": 0.9932183908045978,
+    "timestamp": "2025-12-12T02:21:58.740538",
+    "confusion_matrix": [
+      [
+        95,
+        35
+      ],
+      [
+        5,
+        12
+      ]
+    ]
+  },
+  "naive_bayes_gaussian": {
+    "TP": 1,
+    "TN": 130,
+    "FP": 0,
+    "FN": 16,
+    "P": 17,
+    "N": 130,
+    "Total": 147,
+    "Error": 0.10884353741496598,
+    "Exactitud": 0.891156462585034,
+    "TP_Rate": 0.058823529411764705,
+    "FP_Rate": 0.0,
+    "Precision": 1.0,
+    "Recall": 0.058823529411764705,
+    "Sensibilidad": 0.058823529411764705,
+    "Especificidad": 1.0,
+    "F1_Score": 0.1111111111111111,
+    "Accuracy_sklearn": 0.891156462585034,
+    "best_hyperparameters": {
+      "var_smoothing": 1e-09
+    },
+    "cv_best_score": 0.037701149425287364,
+    "timestamp": "2025-12-12T02:21:58.744973",
+    "confusion_matrix": [
+      [
+        130,
+        0
+      ],
+      [
+        16,
+        1
+      ]
+    ]
+  },
+  "decision_tree": {
+    "TP": 15,
+    "TN": 104,
+    "FP": 26,
+    "FN": 2,
+    "P": 17,
+    "N": 130,
+    "Total": 147,
+    "Error": 0.19047619047619047,
+    "Exactitud": 0.8095238095238095,
+    "TP_Rate": 0.8823529411764706,
+    "FP_Rate": 0.2,
+    "Precision": 0.36585365853658536,
+    "Recall": 0.8823529411764706,
+    "Sensibilidad": 0.8823529411764706,
+    "Especificidad": 0.8,
+    "F1_Score": 0.5172413793103449,
+    "Accuracy_sklearn": 0.8095238095238095,
+    "best_hyperparameters": {
+      "criterion": "entropy",
+      "max_depth": 3,
+      "min_samples_leaf": 4,
+      "min_samples_split": 2
+    },
+    "cv_best_score": 0.9760919540229885,
+    "timestamp": "2025-12-12T02:21:58.749297",
+    "confusion_matrix": [
+      [
+        104,
+        26
+      ],
+      [
+        2,
+        15
+      ]
+    ]
+  }
+}

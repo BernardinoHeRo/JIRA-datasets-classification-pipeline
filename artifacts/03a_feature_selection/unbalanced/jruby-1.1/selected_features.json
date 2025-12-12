@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "CountLine",
+    "CountLineCodeDecl",
+    "SumCyclomaticModified",
+    "SumCyclomatic",
+    "CountLineCode",
+    "CountLineCodeExe",
+    "COMM",
+    "ADEV",
+    "CountStmtExe",
+    "Del_lines",
+    "CountStmt",
+    "SumCyclomaticStrict",
+    "CountStmtDecl",
+    "CountSemicolon",
+    "CountOutput_Max",
+    "SumEssential",
+    "CountOutput_Mean",
+    "DDEV",
+    "CountLineBlank",
+    "CountDeclClassMethod"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "TP": 45,
+  "TN": 349,
+  "FP": 115,
+  "FN": 32,
+  "P": 77,
+  "N": 464,
+  "Total": 541,
+  "Error": 0.27171903881700554,
+  "Exactitud": 0.7282809611829945,
+  "TP_Rate": 0.5844155844155844,
+  "FP_Rate": 0.2478448275862069,
+  "Precision": 0.28125,
+  "Recall": 0.5844155844155844,
+  "Sensibilidad": 0.5844155844155844,
+  "Especificidad": 0.7521551724137931,
+  "F1_Score": 0.379746835443038,
+  "Accuracy_sklearn": 0.7282809611829945,
+  "best_hyperparameters": {
+    "criterion": "gini",
+    "max_depth": 20,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2
+  },
+  "cv_best_score": 0.8428219503907577,
+  "timestamp": "2025-12-12T02:14:43.658370",
+  "confusion_matrix": [
+    [
+      349,
+      115
+    ],
+    [
+      32,
+      45
+    ]
+  ]
+}

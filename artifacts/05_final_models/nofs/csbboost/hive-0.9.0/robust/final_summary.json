@@ -1,0 +1,109 @@
+{
+  "svm": {
+    "TP": 43,
+    "TN": 168,
+    "FP": 59,
+    "FN": 14,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.25704225352112675,
+    "Exactitud": 0.7429577464788732,
+    "TP_Rate": 0.7543859649122807,
+    "FP_Rate": 0.2599118942731278,
+    "Precision": 0.4215686274509804,
+    "Recall": 0.7543859649122807,
+    "Sensibilidad": 0.7543859649122807,
+    "Especificidad": 0.7400881057268722,
+    "F1_Score": 0.5408805031446541,
+    "Accuracy_sklearn": 0.7429577464788732,
+    "best_hyperparameters": {
+      "C": 10,
+      "gamma": 0.1,
+      "kernel": "rbf"
+    },
+    "cv_best_score": 0.9627819548872181,
+    "timestamp": "2025-12-12T02:20:44.467359",
+    "confusion_matrix": [
+      [
+        168,
+        59
+      ],
+      [
+        14,
+        43
+      ]
+    ]
+  },
+  "naive_bayes_gaussian": {
+    "TP": 9,
+    "TN": 223,
+    "FP": 4,
+    "FN": 48,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.18309859154929578,
+    "Exactitud": 0.8169014084507042,
+    "TP_Rate": 0.15789473684210525,
+    "FP_Rate": 0.01762114537444934,
+    "Precision": 0.6923076923076923,
+    "Recall": 0.15789473684210525,
+    "Sensibilidad": 0.15789473684210525,
+    "Especificidad": 0.9823788546255506,
+    "F1_Score": 0.2571428571428571,
+    "Accuracy_sklearn": 0.8169014084507042,
+    "best_hyperparameters": {
+      "var_smoothing": 1e-09
+    },
+    "cv_best_score": 0.1468671679197995,
+    "timestamp": "2025-12-12T02:20:44.471950",
+    "confusion_matrix": [
+      [
+        223,
+        4
+      ],
+      [
+        48,
+        9
+      ]
+    ]
+  },
+  "decision_tree": {
+    "TP": 48,
+    "TN": 189,
+    "FP": 38,
+    "FN": 9,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.16549295774647887,
+    "Exactitud": 0.8345070422535211,
+    "TP_Rate": 0.8421052631578947,
+    "FP_Rate": 0.16740088105726872,
+    "Precision": 0.5581395348837209,
+    "Recall": 0.8421052631578947,
+    "Sensibilidad": 0.8421052631578947,
+    "Especificidad": 0.8325991189427313,
+    "F1_Score": 0.6713286713286714,
+    "Accuracy_sklearn": 0.8345070422535211,
+    "best_hyperparameters": {
+      "criterion": "gini",
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2
+    },
+    "cv_best_score": 0.8687656641604009,
+    "timestamp": "2025-12-12T02:20:44.476568",
+    "confusion_matrix": [
+      [
+        189,
+        38
+      ],
+      [
+        9,
+        48
+      ]
+    ]
+  }
+}

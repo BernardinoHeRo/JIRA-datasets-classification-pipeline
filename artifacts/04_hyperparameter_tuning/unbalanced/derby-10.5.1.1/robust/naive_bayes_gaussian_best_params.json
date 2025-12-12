@@ -2,12 +2,20 @@
   "best_params": {
     "var_smoothing": 1e-09
   },
-  "best_cv_score": 0.0196078431372549,
+  "best_cv_score": 0.01956989247311828,
   "test_metrics": {
     "accuracy": 0.8502772643253235,
     "precision": 0.3,
     "recall": 0.03896103896103896,
     "f1_score": 0.06896551724137931
   },
-  "timestamp": "2025-11-28T13:29:10.920493"
+  "timestamp": "2025-12-12T02:09:22.273258",
+  "cv_folds": 10,
+  "n_combinations_tested": 6,
+  "total_fits": 60,
+  "time_seconds": 2.787927,
+  "dataset_info": {
+    "n_samples": 2164,
+    "n_features": 65
+  }
 }

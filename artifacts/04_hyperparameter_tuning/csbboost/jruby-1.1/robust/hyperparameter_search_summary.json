@@ -3,7 +3,7 @@
     "best_params": {
       "var_smoothing": 1e-09
     },
-    "best_cv_score": 0.048004768917876424,
+    "best_cv_score": 0.037701149425287364,
     "test_metrics": {
       "accuracy": 0.891156462585034,
       "precision": 1.0,
@@ -11,14 +11,38 @@
       "f1_score": 0.1111111111111111
     },
     "n_combinations_tested": 6,
-    "cv_folds": 3,
-    "total_fits": 18,
-    "time_seconds": 3.754802,
+    "cv_folds": 10,
+    "total_fits": 60,
+    "time_seconds": 2.755097,
     "dataset_info": {
       "n_samples": 584,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:33:43.587366"
+    "timestamp": "2025-12-12T02:21:15.060895"
+  },
+  "decision_tree": {
+    "best_params": {
+      "criterion": "entropy",
+      "max_depth": 3,
+      "min_samples_leaf": 4,
+      "min_samples_split": 2
+    },
+    "best_cv_score": 0.9760919540229885,
+    "test_metrics": {
+      "accuracy": 0.8095238095238095,
+      "precision": 0.36585365853658536,
+      "recall": 0.8823529411764706,
+      "f1_score": 0.5172413793103449
+    },
+    "n_combinations_tested": 160,
+    "cv_folds": 10,
+    "total_fits": 1600,
+    "time_seconds": 4.127853,
+    "dataset_info": {
+      "n_samples": 584,
+      "n_features": 65
+    },
+    "timestamp": "2025-12-12T02:21:16.433959"
   },
   "svm": {
     "best_params": {
@@ -26,7 +50,7 @@
       "gamma": 0.1,
       "kernel": "rbf"
     },
-    "best_cv_score": 0.993127147766323,
+    "best_cv_score": 0.9932183908045978,
     "test_metrics": {
       "accuracy": 0.7278911564625851,
       "precision": 0.2553191489361702,
@@ -34,37 +58,13 @@
       "f1_score": 0.375
     },
     "n_combinations_tested": 72,
-    "cv_folds": 3,
-    "total_fits": 216,
-    "time_seconds": 4.110236,
+    "cv_folds": 10,
+    "total_fits": 720,
+    "time_seconds": 8.67022,
     "dataset_info": {
       "n_samples": 584,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:33:43.940526"
-  },
-  "decision_tree": {
-    "best_params": {
-      "criterion": "gini",
-      "max_depth": 3,
-      "min_samples_leaf": 8,
-      "min_samples_split": 2
-    },
-    "best_cv_score": 0.9146153306683499,
-    "test_metrics": {
-      "accuracy": 0.8639455782312925,
-      "precision": 0.4444444444444444,
-      "recall": 0.7058823529411765,
-      "f1_score": 0.5454545454545454
-    },
-    "n_combinations_tested": 160,
-    "cv_folds": 3,
-    "total_fits": 480,
-    "time_seconds": 4.260948,
-    "dataset_info": {
-      "n_samples": 584,
-      "n_features": 65
-    },
-    "timestamp": "2025-11-28T13:33:44.093768"
+    "timestamp": "2025-12-12T02:21:20.975107"
   }
 }

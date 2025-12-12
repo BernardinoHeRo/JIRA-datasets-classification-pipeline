@@ -5,12 +5,20 @@
     "min_samples_leaf": 1,
     "min_samples_split": 2
   },
-  "best_cv_score": 0.9542952460383654,
+  "best_cv_score": 0.9632575757575758,
   "test_metrics": {
     "accuracy": 0.8303030303030303,
     "precision": 0.28125,
     "recall": 0.6428571428571429,
     "f1_score": 0.391304347826087
   },
-  "timestamp": "2025-11-28T13:30:50.097101"
+  "timestamp": "2025-12-12T02:15:40.110682",
+  "cv_folds": 10,
+  "n_combinations_tested": 160,
+  "total_fits": 1600,
+  "time_seconds": 3.982758,
+  "dataset_info": {
+    "n_samples": 656,
+    "n_features": 65
+  }
 }

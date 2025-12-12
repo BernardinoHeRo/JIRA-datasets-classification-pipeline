@@ -3,7 +3,7 @@
     "best_params": {
       "var_smoothing": 0.0001
     },
-    "best_cv_score": 0.572883070891039,
+    "best_cv_score": 0.5742807017543861,
     "test_metrics": {
       "accuracy": 0.843501326259947,
       "precision": 0.5,
@@ -11,14 +11,38 @@
       "f1_score": 0.5426356589147286
     },
     "n_combinations_tested": 6,
-    "cv_folds": 3,
-    "total_fits": 18,
-    "time_seconds": 3.627857,
+    "cv_folds": 10,
+    "total_fits": 60,
+    "time_seconds": 2.494806,
     "dataset_info": {
       "n_samples": 1507,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:28:10.765221"
+    "timestamp": "2025-12-12T02:05:55.965084"
+  },
+  "decision_tree": {
+    "best_params": {
+      "criterion": "entropy",
+      "max_depth": 20,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5
+    },
+    "best_cv_score": 0.9086315789473683,
+    "test_metrics": {
+      "accuracy": 0.8196286472148541,
+      "precision": 0.45263157894736844,
+      "recall": 0.7288135593220338,
+      "f1_score": 0.5584415584415584
+    },
+    "n_combinations_tested": 160,
+    "cv_folds": 10,
+    "total_fits": 1600,
+    "time_seconds": 5.672554,
+    "dataset_info": {
+      "n_samples": 1507,
+      "n_features": 65
+    },
+    "timestamp": "2025-12-12T02:05:59.143369"
   },
   "svm": {
     "best_params": {
@@ -34,37 +58,13 @@
       "f1_score": 0.2706422018348624
     },
     "n_combinations_tested": 72,
-    "cv_folds": 3,
-    "total_fits": 216,
-    "time_seconds": 4.848815,
+    "cv_folds": 10,
+    "total_fits": 720,
+    "time_seconds": 25.654853,
     "dataset_info": {
       "n_samples": 1507,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:28:11.984263"
-  },
-  "decision_tree": {
-    "best_params": {
-      "criterion": "entropy",
-      "max_depth": 5,
-      "min_samples_leaf": 8,
-      "min_samples_split": 20
-    },
-    "best_cv_score": 0.8952286093720357,
-    "test_metrics": {
-      "accuracy": 0.8673740053050398,
-      "precision": 0.5569620253164557,
-      "recall": 0.7457627118644068,
-      "f1_score": 0.6376811594202898
-    },
-    "n_combinations_tested": 160,
-    "cv_folds": 3,
-    "total_fits": 480,
-    "time_seconds": 4.907606,
-    "dataset_info": {
-      "n_samples": 1507,
-      "n_features": 65
-    },
-    "timestamp": "2025-11-28T13:28:12.044645"
+    "timestamp": "2025-12-12T02:06:19.123378"
   }
 }

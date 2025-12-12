@@ -3,7 +3,7 @@
     "best_params": {
       "var_smoothing": 0.0001
     },
-    "best_cv_score": 0.4468085106382978,
+    "best_cv_score": 0.482392026578073,
     "test_metrics": {
       "accuracy": 0.7547169811320755,
       "precision": 0.4166666666666667,
@@ -11,37 +11,14 @@
       "f1_score": 0.43478260869565216
     },
     "n_combinations_tested": 6,
-    "cv_folds": 3,
-    "total_fits": 18,
-    "time_seconds": 3.624708,
+    "cv_folds": 10,
+    "total_fits": 60,
+    "time_seconds": 2.567877,
     "dataset_info": {
       "n_samples": 846,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:31:57.180895"
-  },
-  "svm": {
-    "best_params": {
-      "C": 0.01,
-      "gamma": 0.1,
-      "kernel": "rbf"
-    },
-    "best_cv_score": 0.9030732860520095,
-    "test_metrics": {
-      "accuracy": 0.4858490566037736,
-      "precision": 0.26618705035971224,
-      "recall": 0.8409090909090909,
-      "f1_score": 0.40437158469945356
-    },
-    "n_combinations_tested": 72,
-    "cv_folds": 3,
-    "total_fits": 216,
-    "time_seconds": 4.405196,
-    "dataset_info": {
-      "n_samples": 846,
-      "n_features": 65
-    },
-    "timestamp": "2025-11-28T13:31:57.960419"
+    "timestamp": "2025-12-12T02:17:37.967538"
   },
   "decision_tree": {
     "best_params": {
@@ -50,7 +27,7 @@
       "min_samples_leaf": 1,
       "min_samples_split": 2
     },
-    "best_cv_score": 0.8557919621749409,
+    "best_cv_score": 0.8674418604651162,
     "test_metrics": {
       "accuracy": 0.8018867924528302,
       "precision": 0.515625,
@@ -58,13 +35,36 @@
       "f1_score": 0.6111111111111112
     },
     "n_combinations_tested": 160,
-    "cv_folds": 3,
-    "total_fits": 480,
-    "time_seconds": 4.525051,
+    "cv_folds": 10,
+    "total_fits": 1600,
+    "time_seconds": 4.30713,
     "dataset_info": {
       "n_samples": 846,
       "n_features": 65
     },
-    "timestamp": "2025-11-28T13:31:58.081477"
+    "timestamp": "2025-12-12T02:17:39.707064"
+  },
+  "svm": {
+    "best_params": {
+      "C": 0.1,
+      "gamma": 0.1,
+      "kernel": "rbf"
+    },
+    "best_cv_score": 0.893576965669989,
+    "test_metrics": {
+      "accuracy": 0.5330188679245284,
+      "precision": 0.2868217054263566,
+      "recall": 0.8409090909090909,
+      "f1_score": 0.4277456647398844
+    },
+    "n_combinations_tested": 72,
+    "cv_folds": 10,
+    "total_fits": 720,
+    "time_seconds": 12.040996,
+    "dataset_info": {
+      "n_samples": 846,
+      "n_features": 65
+    },
+    "timestamp": "2025-12-12T02:17:47.439874"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "CountDeclMethodPrivate",
+    "OWN_LINE",
+    "MINOR_LINE",
+    "CountStmt",
+    "CountStmtExe",
+    "MAJOR_LINE",
+    "MaxNesting_Max",
+    "CountLineComment",
+    "CountLine",
+    "AvgCyclomatic",
+    "CountClassCoupled",
+    "CountPath_Max",
+    "CountDeclMethodProtected",
+    "CountLineCodeExe",
+    "CountSemicolon",
+    "CountLineCode",
+    "AvgCyclomaticModified",
+    "MaxInheritanceTree",
+    "RatioCommentToCode",
+    "CountStmtDecl"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "naive_bayes_gaussian": {
+    "best_params": {
+      "var_smoothing": 1e-09
+    },
+    "best_cv_score": 0.6542528735632185,
+    "test_metrics": {
+      "accuracy": 0.9047619047619048,
+      "precision": 0.5714285714285714,
+      "recall": 0.7058823529411765,
+      "f1_score": 0.631578947368421
+    },
+    "n_combinations_tested": 6,
+    "cv_folds": 10,
+    "total_fits": 60,
+    "time_seconds": 2.570442,
+    "dataset_info": {
+      "n_samples": 584,
+      "n_features": 20
+    },
+    "timestamp": "2025-12-12T02:38:17.810338"
+  },
+  "decision_tree": {
+    "best_params": {
+      "criterion": "entropy",
+      "max_depth": 20,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2
+    },
+    "best_cv_score": 0.9350574712643678,
+    "test_metrics": {
+      "accuracy": 0.8435374149659864,
+      "precision": 0.38461538461538464,
+      "recall": 0.5882352941176471,
+      "f1_score": 0.46511627906976744
+    },
+    "n_combinations_tested": 160,
+    "cv_folds": 10,
+    "total_fits": 1600,
+    "time_seconds": 3.45582,
+    "dataset_info": {
+      "n_samples": 584,
+      "n_features": 20
+    },
+    "timestamp": "2025-12-12T02:38:18.695855"
+  },
+  "svm": {
+    "best_params": {
+      "C": 0.01,
+      "gamma": 1,
+      "kernel": "rbf"
+    },
+    "best_cv_score": 0.9698850574712644,
+    "test_metrics": {
+      "accuracy": 0.4965986394557823,
+      "precision": 0.18681318681318682,
+      "recall": 1.0,
+      "f1_score": 0.3148148148148148
+    },
+    "n_combinations_tested": 72,
+    "cv_folds": 10,
+    "total_fits": 720,
+    "time_seconds": 6.10191,
+    "dataset_info": {
+      "n_samples": 584,
+      "n_features": 20
+    },
+    "timestamp": "2025-12-12T02:38:21.341079"
+  }
+}

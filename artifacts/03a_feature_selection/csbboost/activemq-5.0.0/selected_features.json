@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "DDEV",
+    "MAJOR_COMMIT",
+    "OWN_COMMIT",
+    "Added_lines",
+    "Del_lines",
+    "ADEV",
+    "COMM",
+    "CountStmtDecl",
+    "CountLineCodeDecl",
+    "SumCyclomaticStrict",
+    "CountClassCoupled",
+    "AvgCyclomaticStrict",
+    "CountLineCode",
+    "MaxNesting_Mean",
+    "CountPath_Max",
+    "OWN_LINE",
+    "CountLineBlank",
+    "SumCyclomatic",
+    "CountLine",
+    "MaxCyclomaticStrict"
+  ]
+}

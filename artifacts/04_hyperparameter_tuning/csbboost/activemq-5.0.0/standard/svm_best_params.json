@@ -11,5 +11,13 @@
     "recall": 1.0,
     "f1_score": 0.2706422018348624
   },
-  "timestamp": "2025-11-28T13:28:11.984263"
+  "timestamp": "2025-12-12T02:06:19.123378",
+  "cv_folds": 10,
+  "n_combinations_tested": 72,
+  "total_fits": 720,
+  "time_seconds": 25.654853,
+  "dataset_info": {
+    "n_samples": 1507,
+    "n_features": 65
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "best_params": {
+    "C": 0.01,
+    "gamma": 1,
+    "kernel": "rbf"
+  },
+  "best_cv_score": 0.9298419979612641,
+  "test_metrics": {
+    "accuracy": 0.39186691312384475,
+    "precision": 0.18181818181818182,
+    "recall": 0.935064935064935,
+    "f1_score": 0.3044397463002114
+  },
+  "timestamp": "2025-12-12T02:32:28.049364",
+  "cv_folds": 10,
+  "n_combinations_tested": 72,
+  "total_fits": 720,
+  "time_seconds": 34.82348,
+  "dataset_info": {
+    "n_samples": 2164,
+    "n_features": 20
+  }
+}

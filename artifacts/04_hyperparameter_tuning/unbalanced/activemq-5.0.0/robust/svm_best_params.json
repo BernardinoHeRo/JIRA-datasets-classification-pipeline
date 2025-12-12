@@ -4,12 +4,20 @@
     "gamma": 0.001,
     "kernel": "linear"
   },
-  "best_cv_score": 0.9871794871794872,
+  "best_cv_score": 0.9782608695652174,
   "test_metrics": {
     "accuracy": 0.8249336870026526,
     "precision": 0.4426229508196721,
     "recall": 0.4576271186440678,
     "f1_score": 0.45
   },
-  "timestamp": "2025-11-28T13:28:04.943684"
+  "timestamp": "2025-12-12T02:05:51.667876",
+  "cv_folds": 10,
+  "n_combinations_tested": 72,
+  "total_fits": 720,
+  "time_seconds": 20.415073,
+  "dataset_info": {
+    "n_samples": 1507,
+    "n_features": 65
+  }
 }

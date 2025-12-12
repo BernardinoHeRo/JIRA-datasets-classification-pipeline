@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "CountLineCodeDecl",
+    "CountPath_Mean",
+    "CountStmtDecl",
+    "CountLineCode",
+    "CountStmt",
+    "Added_lines",
+    "CountSemicolon",
+    "CountLine",
+    "CountLineBlank",
+    "Del_lines",
+    "MaxNesting_Mean",
+    "OWN_COMMIT",
+    "CountOutput_Max",
+    "OWN_LINE",
+    "CountInput_Mean",
+    "CountLineCodeExe",
+    "CountOutput_Mean",
+    "CountClassCoupled",
+    "CountStmtExe",
+    "RatioCommentToCode"
+  ]
+}

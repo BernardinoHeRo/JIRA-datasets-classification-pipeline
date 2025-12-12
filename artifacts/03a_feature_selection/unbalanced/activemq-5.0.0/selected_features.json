@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "OWN_COMMIT",
+    "MAJOR_COMMIT",
+    "DDEV",
+    "CountStmtDecl",
+    "COMM",
+    "Added_lines",
+    "Del_lines",
+    "CountLine",
+    "ADEV",
+    "SumCyclomaticModified",
+    "CountLineCode",
+    "CountStmt",
+    "SumCyclomaticStrict",
+    "CountLineCodeDecl",
+    "SumCyclomatic",
+    "OWN_LINE",
+    "CountOutput_Mean",
+    "CountClassCoupled",
+    "CountLineBlank",
+    "CountStmtExe"
+  ]
+}

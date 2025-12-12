@@ -1,0 +1,24 @@
+{
+  "best_params": {
+    "criterion": "gini",
+    "max_depth": 10,
+    "min_samples_leaf": 1,
+    "min_samples_split": 5
+  },
+  "best_cv_score": 0.850996677740864,
+  "test_metrics": {
+    "accuracy": 0.7877358490566038,
+    "precision": 0.4927536231884058,
+    "recall": 0.7727272727272727,
+    "f1_score": 0.6017699115044248
+  },
+  "timestamp": "2025-12-12T02:35:14.453922",
+  "cv_folds": 10,
+  "n_combinations_tested": 160,
+  "total_fits": 1600,
+  "time_seconds": 3.804027,
+  "dataset_info": {
+    "n_samples": 846,
+    "n_features": 20
+  }
+}

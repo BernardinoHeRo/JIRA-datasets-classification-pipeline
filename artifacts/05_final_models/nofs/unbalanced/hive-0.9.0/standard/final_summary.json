@@ -1,0 +1,109 @@
+{
+  "svm": {
+    "TP": 27,
+    "TN": 210,
+    "FP": 17,
+    "FN": 30,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.16549295774647887,
+    "Exactitud": 0.8345070422535211,
+    "TP_Rate": 0.47368421052631576,
+    "FP_Rate": 0.07488986784140969,
+    "Precision": 0.6136363636363636,
+    "Recall": 0.47368421052631576,
+    "Sensibilidad": 0.47368421052631576,
+    "Especificidad": 0.9251101321585903,
+    "F1_Score": 0.5346534653465347,
+    "Accuracy_sklearn": 0.8345070422535211,
+    "best_hyperparameters": {
+      "C": 1000,
+      "gamma": 0.01,
+      "kernel": "rbf"
+    },
+    "cv_best_score": 0.5454545454545454,
+    "timestamp": "2025-12-12T02:20:44.384435",
+    "confusion_matrix": [
+      [
+        210,
+        17
+      ],
+      [
+        30,
+        27
+      ]
+    ]
+  },
+  "naive_bayes_gaussian": {
+    "TP": 15,
+    "TN": 222,
+    "FP": 5,
+    "FN": 42,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.16549295774647887,
+    "Exactitud": 0.8345070422535211,
+    "TP_Rate": 0.2631578947368421,
+    "FP_Rate": 0.022026431718061675,
+    "Precision": 0.75,
+    "Recall": 0.2631578947368421,
+    "Sensibilidad": 0.2631578947368421,
+    "Especificidad": 0.9779735682819384,
+    "F1_Score": 0.38961038961038963,
+    "Accuracy_sklearn": 0.8345070422535211,
+    "best_hyperparameters": {
+      "var_smoothing": 1e-05
+    },
+    "cv_best_score": 0.3446640316205533,
+    "timestamp": "2025-12-12T02:20:44.390002",
+    "confusion_matrix": [
+      [
+        222,
+        5
+      ],
+      [
+        42,
+        15
+      ]
+    ]
+  },
+  "decision_tree": {
+    "TP": 39,
+    "TN": 205,
+    "FP": 22,
+    "FN": 18,
+    "P": 57,
+    "N": 227,
+    "Total": 284,
+    "Error": 0.14084507042253522,
+    "Exactitud": 0.8591549295774648,
+    "TP_Rate": 0.6842105263157895,
+    "FP_Rate": 0.09691629955947137,
+    "Precision": 0.639344262295082,
+    "Recall": 0.6842105263157895,
+    "Sensibilidad": 0.6842105263157895,
+    "Especificidad": 0.9030837004405287,
+    "F1_Score": 0.6610169491525424,
+    "Accuracy_sklearn": 0.8591549295774648,
+    "best_hyperparameters": {
+      "criterion": "gini",
+      "max_depth": 20,
+      "min_samples_leaf": 1,
+      "min_samples_split": 10
+    },
+    "cv_best_score": 0.6278656126482214,
+    "timestamp": "2025-12-12T02:20:44.395002",
+    "confusion_matrix": [
+      [
+        205,
+        22
+      ],
+      [
+        18,
+        39
+      ]
+    ]
+  }
+}

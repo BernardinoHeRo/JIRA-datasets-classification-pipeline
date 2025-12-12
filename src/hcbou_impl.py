@@ -1,13 +1,4 @@
-"""
-HCBOU (Hybrid Cluster-Based Oversampling and Undersampling) Implementation
-
-This module implements the HCBOU method for multiclass imbalanced classification
-as described in the research papers. The method combines cluster-based undersampling
-for majority classes with SMOTE oversampling for minority classes.
-
-Author: Extracted from research implementation
-Date: 2024
-"""
+# src/hcbou_impl.py
 
 import pandas as pd
 import numpy as np
@@ -15,13 +6,11 @@ import warnings
 from collections import Counter
 from typing import Tuple, Dict, Optional, Any
 
-# Scikit-learn imports
 from sklearn.cluster import KMeans, MiniBatchKMeans
 from sklearn.metrics import silhouette_score, roc_auc_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
-# Imbalanced-learn imports
 from imblearn.under_sampling import ClusterCentroids
 from imblearn.over_sampling import SMOTE
 
@@ -30,26 +19,7 @@ warnings.filterwarnings('ignore')
 
 
 def roc_auc_score_multiclass(y_test, y_pred, average="macro"):
-    """
-    Calculate ROC AUC score for multiclass classification.
 
-    This function implements a custom ROC AUC calculation for multiclass problems
-    by treating each class as binary (one-vs-all) and computing the average.
-
-    Parameters:
-    -----------
-    y_test : array-like
-        True labels
-    y_pred : array-like
-        Predicted labels
-    average : str, default="macro"
-        Type of averaging performed
-
-    Returns:
-    --------
-    dict or float
-        ROC AUC scores for each class (dict) or average score (float)
-    """
     # Creating a set of all the unique classes using the actual class list
     unique_class = set(y_test)
     roc_auc_dict = {}
@@ -77,28 +47,8 @@ def roc_auc_score_multiclass(y_test, y_pred, average="macro"):
 
 
 def majority_class_undersampling(X_majority, y_majority, target_size, max_clusters=8, random_state=42):
-    """
-    Apply cluster-based undersampling to majority class using ClusterCentroids.
 
-    Parameters:
-    -----------
-    X_majority : pd.DataFrame
-        Features of majority class samples
-    y_majority : pd.Series
-        Labels of majority class samples
-    target_size : int
-        Target number of samples after undersampling
-    max_clusters : int, default=8
-        Maximum number of clusters for undersampling
-    random_state : int, default=42
-        Random state for reproducibility
-
-    Returns:
-    --------
-    pd.DataFrame
-        Undersampled majority class data with 'class' column
-    """
-    print(f"[Mayoritaria] Aplicando submuestreo")
+    # print(f"[Mayoritaria] Aplicando submuestreo")
 
     # Create temporary dataset for ClusterCentroids
     temp_majority = X_majority.copy()
@@ -137,32 +87,14 @@ def majority_class_undersampling(X_majority, y_majority, target_size, max_cluste
     balanced_majority['class'] = majority_class_label  # Restore original type
 
     # print(f"Clase mayoritaria: {len(X_majority)} -> {len(balanced_majority)} muestras")
-    print(f"[Mayoritaria] Tamaño después de submuestreo: {len(balanced_majority)}")
+    # print(f"[Mayoritaria] Tamaño después de submuestreo: {len(balanced_majority)}")
     # print(f"[Mayoritaria] Reducción: {len(balanced_majority)/len(X_majority)*100:.1f}%")
 
     return balanced_majority
 
 
 def minority_class_clustering(X_minority, max_clusters=6, min_cluster_obs=5, random_state=42):
-    """
-    Find optimal number of clusters for minority class using silhouette score.
-
-    Parameters:
-    -----------
-    X_minority : pd.DataFrame
-        Features of minority class samples
-    max_clusters : int, default=6
-        Maximum number of clusters to consider
-    min_cluster_obs : int, default=5
-        Minimum observations required per cluster
-    random_state : int, default=42
-        Random state for reproducibility
-
-    Returns:
-    --------
-    tuple
-        (optimal_clusters, cluster_labels, kmeans_model)
-    """
+    
     # print(f"Buscando número óptimo de clusters para la clase minoritaria...")
 
     # Search for optimal number of clusters
@@ -212,10 +144,10 @@ def minority_class_clustering(X_minority, max_clusters=6, min_cluster_obs=5, ran
         kmeans_model.fit(X_minority)
         
         # Imprimir K optimo de silueta
-        print(f"[Minoritaria] K óptimo (Silhouete) = {optimal_clusters}")
+        # print(f"[Minoritaria] K óptimo (Silhouete) = {optimal_clusters}")
         
-        print(f"[Minoritaria] Número óptimo de clusters: {optimal_clusters}")
-        print(f"Mejor índice silhouette: {max(silhouette_scores):.4f}")
+        # print(f"[Minoritaria] Número óptimo de clusters: {optimal_clusters}")
+        # print(f"Mejor índice silhouette: {max(silhouette_scores):.4f}")
 
     return optimal_clusters, kmeans_model
 
@@ -223,35 +155,7 @@ def minority_class_clustering(X_minority, max_clusters=6, min_cluster_obs=5, ran
 def minority_class_smote_balancing(X_minority, y_minority, X_majority_balanced,
                                  target_size, optimal_clusters, kmeans_model=None,
                                  min_cluster_obs=5, k_smote=3, random_state=42):
-    """
-    Apply SMOTE balancing to minority class using cluster-based approach.
-
-    Parameters:
-    -----------
-    X_minority : pd.DataFrame
-        Features of minority class samples
-    y_minority : pd.Series
-        Labels of minority class samples
-    X_majority_balanced : pd.DataFrame
-        Already balanced majority class features (for SMOTE)
-    target_size : int
-        Target number of minority samples after balancing
-    optimal_clusters : int
-        Number of clusters to use
-    kmeans_model : KMeans model or None
-        Fitted KMeans model
-    min_cluster_obs : int, default=5
-        Minimum observations per cluster
-    k_smote : int, default=3
-        Number of neighbors for SMOTE
-    random_state : int, default=42
-        Random state for reproducibility
-
-    Returns:
-    --------
-    pd.DataFrame
-        Balanced minority class data with 'class' column
-    """
+    
     # print(f"Aplicando balanceo SMOTE a la clase minoritaria...")
 
     minority_data = X_minority.copy()
@@ -284,7 +188,7 @@ def minority_class_smote_balancing(X_minority, y_minority, X_majority_balanced,
     cluster_distribution = minority_data['cluster'].value_counts()
     cluster_weights = cluster_distribution / cluster_distribution.sum()
     # Imprimir k optimo de silueta
-    print(f"[Minoritaria] K´ óptimo (Silhouete) = {len(cluster_labels)}")
+    # print(f"[Minoritaria] K´ óptimo (Silhouete) = {len(cluster_labels)}")
     # print(f"Distribución de clusters: {dict(cluster_distribution)}")
     # print(f"Pesos de los clusters: {dict(cluster_weights)}")
 
@@ -308,7 +212,7 @@ def minority_class_smote_balancing(X_minority, y_minority, X_majority_balanced,
 
             if cluster_size < k_smote + 1:
                 # Not enough samples for SMOTE, duplicate randomly
-                print(f"  Cluster demasiado pequeño para SMOTE, duplicando aleatoriamente")
+                # print(f"  Cluster demasiado pequeño para SMOTE, duplicando aleatoriamente")
                 duplicated = cluster_data.sample(n=samples_needed, replace=True, random_state=random_state)
                 cluster_result = pd.concat([cluster_data, duplicated])
             else:
@@ -337,8 +241,8 @@ def minority_class_smote_balancing(X_minority, y_minority, X_majority_balanced,
 
     # Add class label (restore original type)
     balanced_minority_data['class'] = minority_class_label
-    print(f"[Minoritaria] Nuevas muestras sintéticas generadas: {len(balanced_minority_data) - len(X_minority)}")
-    print(f"[Minoritaria] Tamaño final (original + sintético): {len(balanced_minority_data)}")
+    # print(f"[Minoritaria] Nuevas muestras sintéticas generadas: {len(balanced_minority_data) - len(X_minority)}")
+    # print(f"[Minoritaria] Tamaño final (original + sintético): {len(balanced_minority_data)}")
     #print(f"Clase minoritaria: {len(X_minority)} -> {len(balanced_minority_data)} muestras")
     #print(f"Cambio: {len(balanced_minority_data)/len(X_minority)*100:.1f}%")
 
@@ -429,16 +333,16 @@ def hcbou_balance(X, y, max_clusters_maj=8, max_clusters_min=6, k_smote=3,
     target_per_class = total_samples // 2  # For binary classification
 
     # Step 1: Majority class undersampling
-    if verbose:
-        print(f"\nClase Mayoritarias---------")
+    # if verbose:
+    #    print(f"\nClase Mayoritarias---------")
 
     balanced_majority = majority_class_undersampling(
         X_majority, y_majority, target_per_class, max_clusters_maj, random_state
     )
 
     # Step 2: Minority class clustering and SMOTE balancing
-    if verbose:
-        print(f"\nClase minoritarias---------")
+    # if verbose:
+    #    print(f"\nClase minoritarias---------")
 
     # Find optimal clusters
     optimal_clusters, kmeans_model = minority_class_clustering(
@@ -467,11 +371,11 @@ def hcbou_balance(X, y, max_clusters_maj=8, max_clusters_min=6, k_smote=3,
     final_counts = y_balanced.value_counts().sort_index()
 
     if verbose:
-        print(f"\nHCBOU balanceo terminado.")
-        print(f"    Tamaño final del train balanceado: {len(y_balanced)}")
+        # print(f"\nHCBOU balanceo terminado.")
+        print(f"\nTamaño final del train balanceado: {len(y_balanced)}")
         #for class_label, count in final_counts.items():
         #    print(f"    Clase {class_label}: {count} muestras")
-        print(f"    Distribución clases: { {int(k): int(v) for k, v in final_counts.items()} }")
+        print(f"Distribución clases: { {int(k): int(v) for k, v in final_counts.items()} }")
         # print(f"Ratio de balance: {final_counts.min()}:{final_counts.max()}")
         # print(f"Cambio de tamaño del conjunto de datos: {len(X)} -> {len(X_balanced)} ({(len(X_balanced)-len(X))/len(X)*100:+.1f}%)")
 
@@ -502,23 +406,7 @@ DEFAULT_PARAMS = {
 
 
 def get_recommended_params(X, y, scenario='auto'):
-    """
-    Get recommended HCBOU parameters based on dataset characteristics.
-
-    Parameters:
-    -----------
-    X : pd.DataFrame
-        Features matrix
-    y : pd.Series
-        Target labels
-    scenario : str, default='auto'
-        Scenario type: 'auto', 'binary_classification', 'multiclass_small', 'multiclass_large'
-
-    Returns:
-    --------
-    dict
-        Recommended parameters for HCBOU
-    """
+    
     n_classes = len(y.unique())
     n_samples = len(y)
 

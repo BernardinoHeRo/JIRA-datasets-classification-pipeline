@@ -73,12 +73,12 @@ def csbboost_resample(X_train, y_train, k_neighbors=5,
 
     rng = np.random.default_rng(random_state)
     
-    print(f"\nClases Mayoritarias---------")
+    # print(f"\nClases Mayoritarias---------")
     # Mayoría: clustering + undersampling
     K_maj = choose_optimal_k(X_maj, k_min=k_range_major[0],
                              k_max=k_range_major[1],
                              random_state=random_state)
-    print(f"[Mayoría] K óptimo (Silhouette) = {K_maj}")
+    # print(f"[Mayoría] K óptimo (Silhouette) = {K_maj}")
 
     kmeans_maj = KMeans(n_clusters=K_maj, random_state=random_state, n_init=10)
     labels_maj = kmeans_maj.fit_predict(X_maj)
@@ -98,14 +98,14 @@ def csbboost_resample(X_train, y_train, k_neighbors=5,
     X_maj_merged = np.vstack(maj_samples_list)
     y_maj_merged = np.full(X_maj_merged.shape[0], maj_label)
 
-    print(f"[Mayoría] Tamaño después de undersampling clusterizado: {X_maj_merged.shape[0]}")
+    # print(f"[Mayoría] Tamaño después de undersampling clusterizado: {X_maj_merged.shape[0]}")
 
-    print(f"\nClases Minoritarias---------")
+    # print(f"\nClases Minoritarias---------")
     # Minoría: clustering + SMOTE por clúster
     K_min = choose_optimal_k(X_min, k_min=k_range_minor[0],
                              k_max=k_range_minor[1],
                              random_state=random_state)
-    print(f"[Minoría] K' óptimo (Silhouette) = {K_min}")
+    # print(f"[Minoría] K' óptimo (Silhouette) = {K_min}")
 
     kmeans_min = KMeans(n_clusters=K_min, random_state=random_state, n_init=10)
     labels_min = kmeans_min.fit_predict(X_min)
@@ -135,12 +135,12 @@ def csbboost_resample(X_train, y_train, k_neighbors=5,
         X_min_synth = np.empty((0, X_min.shape[1]))
         y_min_synth = np.array([], dtype=y_train.dtype)
 
-    print(f"[Minoría] Nuevas muestras sintéticas generadas: {X_min_synth.shape[0]}")
+    # print(f"[Minoría] Nuevas muestras sintéticas generadas: {X_min_synth.shape[0]}")
 
     X_min_final = np.vstack([X_min, X_min_synth])
     y_min_final = np.full(X_min_final.shape[0], min_label)
 
-    print(f"[Minoría] Tamaño final (original + sintético): {X_min_final.shape[0]}")
+    # print(f"[Minoría] Tamaño final (original + sintético): {X_min_final.shape[0]}")
 
     X_bal = np.vstack([X_maj_merged, X_min_final])
     y_bal = np.concatenate([y_maj_merged, y_min_final])
@@ -152,8 +152,8 @@ def csbboost_resample(X_train, y_train, k_neighbors=5,
     X_bal_df = X_bal_df.iloc[perm].reset_index(drop=True)
     y_bal_sr = y_bal_sr.iloc[perm].reset_index(drop=True)
 
-    print(f"\nCSBBoost balanceo terminado.")
-    print(f"    Tamaño final train balanceado: {X_bal_df.shape[0]}")
-    print(f"    Distribución clases: {y_bal_sr.value_counts().to_dict()}")
+    #print(f"\nCSBBoost balanceo terminado.")
+    print(f"\nTamaño final train balanceado: {X_bal_df.shape[0]}")
+    print(f"Distribución clases: {y_bal_sr.value_counts().to_dict()}")
 
     return X_bal_df, y_bal_sr

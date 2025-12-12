@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "COMM",
+    "RatioCommentToCode",
+    "Added_lines",
+    "OWN_LINE",
+    "CountLineCodeDecl",
+    "ADEV",
+    "CountClassCoupled",
+    "CountLine",
+    "CountSemicolon",
+    "DDEV",
+    "CountOutput_Max",
+    "Del_lines",
+    "CountLineCodeExe",
+    "CountStmtDecl",
+    "CountLineCode",
+    "CountLineComment",
+    "CountStmt",
+    "CountOutput_Mean",
+    "CountLineBlank",
+    "CountStmtExe"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "Added_lines",
+    "COMM",
+    "Del_lines",
+    "ADEV",
+    "CountInput_Mean",
+    "OWN_COMMIT",
+    "MAJOR_COMMIT",
+    "CountClassCoupled",
+    "MaxNesting_Mean",
+    "DDEV",
+    "CountPath_Mean",
+    "CountOutput_Mean",
+    "CountPath_Max",
+    "CountStmtExe",
+    "AvgLineCode",
+    "MaxNesting_Max",
+    "AvgLineComment",
+    "CountInput_Max",
+    "AvgLine",
+    "CountDeclMethodPrivate"
+  ]
+}

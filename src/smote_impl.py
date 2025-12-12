@@ -1,17 +1,5 @@
 # src/smote_impl.py
 
-"""
-Balanceo simple con SMOTE + submuestreo aleatorio de la clase mayoritaria.
-
-Objetivo:
-- Mantener el MISMO criterio de HCBOU y CSBBoost:
-  - Dataset original tiene N muestras
-  - Después del balanceo:
-      clase 0 ≈ N/2
-      clase 1 ≈ N/2
-      total ≈ N
-"""
-
 import pandas as pd
 import numpy as np
 from typing import Tuple
@@ -25,34 +13,6 @@ def smote_balance(
     random_state: int = 42,
     verbose: bool = True,
 ) -> Tuple[pd.DataFrame, pd.Series]:
-    """
-    Aplica un esquema de balanceo con SMOTE que imita el criterio
-    de HCBOU/CSBBoost (≈ N/2 por clase).
-
-    Pasos:
-    1. Detectar clase mayoritaria y minoritaria
-    2. Definir target_per_class = N_total // 2
-    3. Submuestrear aleatoriamente la clase mayoritaria a target_per_class
-    4. Aplicar SMOTE para llevar la clase minoritaria a target_per_class
-
-    Parámetros
-    ----------
-    X_train : pd.DataFrame
-        Características del conjunto de entrenamiento.
-    y_train : pd.Series
-        Etiquetas del conjunto de entrenamiento.
-    random_state : int
-        Semilla para reproducibilidad.
-    verbose : bool
-        Si True, imprime información del proceso.
-
-    Retorna
-    -------
-    X_bal : pd.DataFrame
-        Conjunto de entrenamiento balanceado.
-    y_bal : pd.Series
-        Etiquetas balanceadas.
-    """
 
     # Asegurar tipos
     if not isinstance(X_train, pd.DataFrame):
@@ -100,9 +60,9 @@ def smote_balance(
     X_maj_down = X_maj.sample(n=n_maj_target, random_state=random_state)
     y_maj_down = y_maj.loc[X_maj_down.index]
 
-    if verbose:
-        print(f"\n[SMOTE] Clase mayoritaria ({majority_class}): "
-              f"{len(X_maj)} -> {len(X_maj_down)} muestras")
+    # if verbose:
+    #    print(f"\n[SMOTE] Clase mayoritaria ({majority_class}): "
+    #          f"{len(X_maj)} -> {len(X_maj_down)} muestras")
 
     # ----------------------------
     # 2) SMOTE sobre minoría
@@ -124,9 +84,11 @@ def smote_balance(
     # Después de SMOTE:
     final_counts = y_res.value_counts().sort_index()
 
+    # Imprimir tamaño final del train balanceado
+    print(f"\nTamaño final train balanceado: {X_res.shape[0]}")
+
     if verbose:
-        print(f"[SMOTE] Distribución final (aprox N/2 por clase): "
-              f"{final_counts.to_dict()}")
+        print(f"Distribución clases: "f"{final_counts.to_dict()}")
 
     # Asegurar DataFrame/Serie
     X_bal = pd.DataFrame(X_res, columns=X_train.columns)

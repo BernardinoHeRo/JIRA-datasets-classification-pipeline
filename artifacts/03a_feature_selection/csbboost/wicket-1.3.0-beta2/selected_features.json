@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "CountLineCodeDecl",
+    "CountDeclMethodProtected",
+    "CountStmtDecl",
+    "CountPath_Mean",
+    "ADEV",
+    "COMM",
+    "CountDeclInstanceVariable",
+    "CountOutput_Max",
+    "Del_lines",
+    "MaxCyclomaticStrict",
+    "CountLineCode",
+    "CountStmt",
+    "CountPath_Max",
+    "CountDeclClass",
+    "DDEV",
+    "CountSemicolon",
+    "MaxCyclomatic",
+    "CountLineCodeExe",
+    "MaxInheritanceTree",
+    "MAJOR_COMMIT"
+  ]
+}

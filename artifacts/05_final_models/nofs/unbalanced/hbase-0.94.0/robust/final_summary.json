@@ -1,0 +1,109 @@
+{
+  "svm": {
+    "TP": 0,
+    "TN": 168,
+    "FP": 0,
+    "FN": 44,
+    "P": 44,
+    "N": 168,
+    "Total": 212,
+    "Error": 0.20754716981132076,
+    "Exactitud": 0.7924528301886793,
+    "TP_Rate": 0.0,
+    "FP_Rate": 0.0,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "Sensibilidad": 0.0,
+    "Especificidad": 1.0,
+    "F1_Score": 0.0,
+    "Accuracy_sklearn": 0.7924528301886793,
+    "best_hyperparameters": {
+      "C": 10,
+      "gamma": 0.001,
+      "kernel": "linear"
+    },
+    "cv_best_score": 0.8660130718954248,
+    "timestamp": "2025-12-12T02:18:03.017323",
+    "confusion_matrix": [
+      [
+        168,
+        0
+      ],
+      [
+        44,
+        0
+      ]
+    ]
+  },
+  "naive_bayes_gaussian": {
+    "TP": 44,
+    "TN": 1,
+    "FP": 167,
+    "FN": 0,
+    "P": 44,
+    "N": 168,
+    "Total": 212,
+    "Error": 0.7877358490566038,
+    "Exactitud": 0.21226415094339623,
+    "TP_Rate": 1.0,
+    "FP_Rate": 0.9940476190476191,
+    "Precision": 0.20853080568720378,
+    "Recall": 1.0,
+    "Sensibilidad": 1.0,
+    "Especificidad": 0.005952380952380952,
+    "F1_Score": 0.34509803921568627,
+    "Accuracy_sklearn": 0.21226415094339623,
+    "best_hyperparameters": {
+      "var_smoothing": 1e-09
+    },
+    "cv_best_score": 0.9,
+    "timestamp": "2025-12-12T02:18:03.022067",
+    "confusion_matrix": [
+      [
+        1,
+        167
+      ],
+      [
+        0,
+        44
+      ]
+    ]
+  },
+  "decision_tree": {
+    "TP": 21,
+    "TN": 147,
+    "FP": 21,
+    "FN": 23,
+    "P": 44,
+    "N": 168,
+    "Total": 212,
+    "Error": 0.20754716981132076,
+    "Exactitud": 0.7924528301886793,
+    "TP_Rate": 0.4772727272727273,
+    "FP_Rate": 0.125,
+    "Precision": 0.5,
+    "Recall": 0.4772727272727273,
+    "Sensibilidad": 0.4772727272727273,
+    "Especificidad": 0.875,
+    "F1_Score": 0.4883720930232558,
+    "Accuracy_sklearn": 0.7924528301886793,
+    "best_hyperparameters": {
+      "criterion": "entropy",
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 5
+    },
+    "cv_best_score": 0.5702614379084967,
+    "timestamp": "2025-12-12T02:18:03.026812",
+    "confusion_matrix": [
+      [
+        147,
+        21
+      ],
+      [
+        23,
+        21
+      ]
+    ]
+  }
+}

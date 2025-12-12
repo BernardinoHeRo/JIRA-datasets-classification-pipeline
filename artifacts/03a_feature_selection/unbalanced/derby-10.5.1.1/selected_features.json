@@ -1,0 +1,24 @@
+{
+  "selected_features": [
+    "CountLine",
+    "OWN_LINE",
+    "CountLineCode",
+    "CountLineComment",
+    "CountSemicolon",
+    "CountStmt",
+    "MAJOR_LINE",
+    "SumCyclomatic",
+    "CountStmtExe",
+    "CountLineCodeExe",
+    "CountLineBlank",
+    "CountLineCodeDecl",
+    "CountStmtDecl",
+    "SumCyclomaticModified",
+    "SumCyclomaticStrict",
+    "CountClassCoupled",
+    "RatioCommentToCode",
+    "CountInput_Mean",
+    "CountOutput_Mean",
+    "CountInput_Max"
+  ]
+}
